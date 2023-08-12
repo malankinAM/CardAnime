@@ -1,0 +1,2904 @@
+html {
+  font-size: 1.75vh;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+}
+
+.scroll {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  transform-style: preserve-3d;
+  perspective: 100rem;
+  perspective-origin: calc(50% - 5.5px) 30rem;
+  background: repeating-linear-gradient(-45deg, #5c5d60, #5c5d60 0.1rem, #686a6d 0.1rem, #686a6d 0.5rem);
+  box-shadow: inset 0 0 1rem #434446;
+}
+
+@media (orientation: landscape) {
+  .home .scroll:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    width: 100%;
+    height: 50vh;
+    background: linear-gradient(rgb(109, 105, 109), rgba(241, 43, 43, 0));
+    mix-blend-mode: soft-light;
+    pointer-events: none;
+  }
+}
+*,
+*:before,
+*:after {
+  transform-style: preserve-3d;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(241, 43, 43, 0);
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h2 {
+  display: none;
+}
+
+section {
+  background: radial-gradient(#6f8705, #c0e909);
+}
+
+.title {
+  background: currentColor;
+  font-size: 2em;
+  padding: 1rem;
+  color: #75777a;
+  font-weight: 800;
+  text-align: center;
+  box-shadow: inset 0 -0.3rem #434446, inset 0 0.3rem #434446, 0 -0.3rem currentColor, 0 0.3rem currentColor, 0 3rem 5rem #434446, 0 6rem 5rem #434446, 0 9rem 5rem #434446, 0 12rem 5rem #434446;
+  margin: 0 -3rem;
+}
+.title:before {
+  width: 200%;
+  content: "";
+  height: 60rem;
+  transform: rotateX(90deg);
+  position: absolute;
+  left: -50%;
+  transform-origin: bottom;
+}
+.title:before {
+  bottom: 4.6rem;
+  background: radial-gradient(#434446, #5c5d60);
+}
+.title * {
+  color: #434446;
+}
+.title h1 {
+  font-size: 1em;
+}
+
+.tags > * {
+  background: rgba(67, 68, 70, 0.1);
+  padding: 0.2rem 0.5rem;
+  border-radius: 1rem;
+}
+
+footer {
+  letter-spacing: 0.1rem;
+  color: #434446;
+  background: #75777a;
+  padding: 1rem;
+  box-shadow: 0 0 2rem #434446;
+}
+footer:before {
+  content: "";
+  height: 0.3rem;
+  top: -0.6rem;
+  background: #75777a;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  box-shadow: 0 0 2rem #434446;
+}
+
+.back-btn {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: #c0e909;
+  text-decoration: none;
+  line-height: 1;
+  background: rgba(192, 233, 9, 0.1);
+  border-radius: 1rem;
+  gap: 0.5rem;
+  font-family: Consolas;
+  transition: all 0.25s ease-in-out;
+  border: 0.2rem solid rgba(241, 43, 43, 0);
+}
+.back-btn:hover {
+  box-shadow: 0 0 0 1px rgba(192, 233, 9, 0.5), inset 0 0 0 2rem rgba(192, 233, 9, 0.5);
+  color: #434446;
+}
+
+.link {
+  color: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #434446;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(192, 233, 9, 0.2);
+  border-radius: 0.5rem;
+  border: solid 0.2rem #434446;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(192, 233, 9, 0.5);
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.gap-2 {
+  gap: 2rem;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.card .card-row *:nth-of-type(1),
+.card2 .card-row *:nth-of-type(1) {
+  flex: 1 1 auto;
+}
+
+.p-05 {
+  padding: 0.4rem;
+}
+
+.px-05 {
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+}
+
+.px-10 {
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+}
+
+.pt-10 {
+  padding-top: 0.7rem;
+}
+
+.py-05 {
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+}
+
+.py-10 {
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+}
+
+mt-05 {
+  margin-top: 0.3rem;
+}
+
+.colour-yellow .bg-current {
+  background: #8a8986;
+}
+
+.colour-yellow {
+  color: #8a8986;
+}
+
+.colour-red {
+  color: rgb(109, 104, 104);
+}
+
+.colour-orange {
+  color: rgb(112, 111, 107);
+}
+
+.colour-magenta {
+  color: rgb(136, 130, 136);
+}
+
+.colour-purple {
+  color: rgb(109, 105, 109);
+}
+
+.colour-indigo {
+  color: rgb(147, 143, 150);
+}
+
+.pos-abs {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.z-1 {
+  z-index: 1;
+  position: relative;
+}
+
+.m-10 {
+  margin: 1rem;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.border {
+  border: 0.3rem solid #434446;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.flex-reverse {
+  flex-direction: row-reverse;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.font-24 {
+  font-size: 1.8rem;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+sig {
+  right: 0;
+  bottom: 0;
+  width: 6.9em;
+  transform: skewX(10deg) scaleY(0.45) rotate(2deg);
+  margin: auto;
+  z-index: 2;
+}
+sig,
+sig * {
+  height: 9.25em;
+  overflow: hidden;
+  border-radius: 0.5em;
+}
+sig, sig:before,
+sig *:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+sig:before,
+sig *:before {
+  width: 5em;
+  height: 5em;
+  background: currentColor;
+  transform: translate3d(-2.5em, 0, 0) rotate(-45deg);
+  box-shadow: -3em 3em 0 0 currentColor;
+  border-radius: 0.5em 2em 0.5em 2em;
+  content: "";
+}
+sig * {
+  width: 5em;
+  transform: translate3d(3.75em, 0, 0) scaleY(0.95);
+  display: block;
+}
+sig *:before {
+  transform: translate3d(-3em, -2em, 0) rotate(-45deg);
+  box-shadow: -3em 3em 0 0 currentColor, -6em 6em 0 0 currentColor;
+  border-radius: 0.5em;
+}
+
+.page-sig {
+  position: absolute;
+  top: 0.2rem;
+  right: 25px;
+  width: 10em;
+  height: 10em;
+  font-size: 0.3rem;
+  color: #5c5d60;
+  mix-blend-mode: color-dodge;
+}
+@media (orientation: portrait) {
+  .page-sig {
+    top: 0.1rem;
+    right: 1.2rem;
+  }
+}
+.page-sig:hover {
+  color: #98b807;
+}
+
+.card,
+.card2 {
+  background: #fff;
+  border-radius: 1rem;
+  transform-origin: center;
+  text-align: left;
+  transition: all 0.5s ease-in-out;
+}
+.card .front,
+.card2 .front {
+  font-weight: 600;
+  transform: translate3d(0, 0, 0.1rem);
+  box-shadow: inset 0 0 0 0.75rem #c0e909;
+  padding: 0.75rem;
+}
+.card .front,
+.card .back,
+.card2 .front,
+.card2 .back {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.card .front:after,
+.card .back:after,
+.card2 .front:after,
+.card2 .back:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  height: 120%;
+  width: 400%;
+  background: linear-gradient(75deg, #434446, rgba(67, 68, 70, 0.25) 50%, rgba(241, 43, 43, 0), rgba(241, 43, 43, 0), rgba(255, 255, 255, 0.25), rgba(241, 43, 43, 0), rgba(241, 43, 43, 0), rgba(255, 255, 255, 0.25) 75%, #fff);
+  opacity: 0.5;
+  z-index: 1;
+  pointer-events: none;
+  transform: translate3d(-37rem, 0, 0);
+}
+.card .back,
+.card .back > div,
+.card2 .back,
+.card2 .back > div {
+  height: 100%;
+  width: 100%;
+}
+.card .back,
+.card2 .back {
+  transform: translate3d(0, 0, -0.1rem) rotateY(180deg);
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  padding: 0.5rem;
+  background: linear-gradient(20deg, #c0e909, #fff, #c0e909);
+  display: flex;
+  align-content: stretch;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.card .back > div,
+.card2 .back > div {
+  border-radius: 0.5rem;
+  background: linear-gradient(-80deg, #7d7c79, #a3a2a0, #7d7c79);
+  overflow: hidden;
+}
+.card .back > div:before, .card .back > div:after,
+.card2 .back > div:before,
+.card2 .back > div:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.card .back > div:after,
+.card2 .back > div:after {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, currentColor 25%, rgba(241, 43, 43, 0) 25%, rgba(241, 43, 43, 0) 75%, currentColor 75%, currentColor), linear-gradient(-45deg, currentColor 25%, rgba(241, 43, 43, 0) 25%, rgba(241, 43, 43, 0) 75%, currentColor 75%, currentColor);
+  background-size: 1rem 1rem;
+}
+.card sig,
+.card2 sig {
+  filter: brightness(0.8);
+}
+.card .photo,
+.card2 .photo {
+  width: 100%;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+}
+
+.card .card-row {
+  color: #434446;
+}
+.card .border-bottom {
+  border-bottom: 0.3rem solid #434446;
+}
+.card h1 {
+  margin-bottom: 0.5rem;
+}
+.card h2 {
+  font-size: 1.5em;
+}
+.card .photo > * {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  transform: translate3d(0, 0, -2rem) rotateY(0deg);
+  perspective: 100rem;
+}
+.card .photo .l1 {
+  transform: translate3d(0, 0, -10rem) scale(1.2) rotateX(-15deg);
+}
+.card .photo .l2 {
+  transform: translate3d(0, 0, -20rem) scale(1.5);
+}
+.card .photo .photo-bg {
+  position: absolute;
+  left: -100%;
+  top: -100%;
+  height: 300%;
+  width: 300%;
+  background: #b5b5b3;
+  transform: translate3d(0, 0, -30rem) scale(2);
+  background-image: url("../images/emptybackfade.png");
+}
+
+.card {
+  animation: rotate 3s 1s forwards;
+}
+
+.photo > * {
+  animation: rotate2 3s 1s forwards;
+}
+
+.front:after,
+.back:after {
+  animation: shine1 3s 1s forwards;
+}
+
+.shadow {
+  animation: shadowhover 3s 1s linear forwards;
+}
+
+@keyframes nothing {
+  50% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes rotate2 {
+  33% {
+    transform: translate3d(10rem, 0, -10rem) rotateY(-45deg) scale(1.2);
+  }
+  50% {
+    transform: translate3d(-10rem, 0, 0) rotateY(45deg);
+  }
+}
+@keyframes rotate {
+  50% {
+    transform: translate3d(0, -5, 12.5rem) scale(0.75) rotateY(-200deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 25rem) scale(0.72) rotateY(-360deg);
+    /* transform: translate3d(0,$y,$z) scale(.72) rotateY(-180deg);*/
+  }
+}
+@keyframes shine1 {
+  17%, 45% {
+    transform: translate3d(0, 0, 0);
+  }
+  21%, 46% {
+    transform: translate3d(-70rem, 0, 0);
+  }
+  100% {
+    transform: translate3d(-55rem, 0, 0);
+  }
+}
+.shadow,
+.other-shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.shadow:after,
+.other-shadow:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: -5rem;
+  top: 5rem;
+  background: #000;
+  transform: translate3d(0, 0, -10rem);
+  border-radius: 2rem;
+  opacity: 0.8;
+  filter: blur(3rem);
+}
+
+.home #card1cb:checked ~ .carousel > div > #card1 .shadow,
+.home #card1cb:checked ~ .carousel > div > #card1 .other-shadow {
+  margin: auto;
+  height: 50rem;
+  width: 30rem;
+  left: 10rem;
+  right: 0;
+  filter: blur(3rem);
+  transform-origin: 100% 100%;
+  transform-style: flat;
+  transform: translate3d(-15rem, 0, -35rem) rotateX(90deg) skewX(30deg) scaleX(1.5);
+  transition: all 0.5s ease-in-out;
+  bottom: -16.1rem;
+}
+.home #card1cb:checked ~ .carousel > div > #card1 .shadow:before,
+.home #card1cb:checked ~ .carousel > div > #card1 .other-shadow:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(rgba(241, 43, 43, 0), #000);
+  border-radius: 2rem;
+  transform: translate3d(0, 0, -35rem);
+  opacity: 0;
+}
+.home #card2cb:checked ~ .carousel > div > #card2 .shadow,
+.home #card2cb:checked ~ .carousel > div > #card2 .other-shadow {
+  margin: auto;
+  height: 50rem;
+  width: 30rem;
+  left: 10rem;
+  right: 0;
+  filter: blur(3rem);
+  transform-origin: 100% 100%;
+  transform-style: flat;
+  transform: translate3d(-15rem, 0, -35rem) rotateX(90deg) skewX(30deg) scaleX(1.5);
+  transition: all 0.5s ease-in-out;
+  bottom: -16.1rem;
+}
+.home #card2cb:checked ~ .carousel > div > #card2 .shadow:before,
+.home #card2cb:checked ~ .carousel > div > #card2 .other-shadow:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(rgba(241, 43, 43, 0), #000);
+  border-radius: 2rem;
+  transform: translate3d(0, 0, -35rem);
+  opacity: 0;
+}
+.home #card3cb:checked ~ .carousel > div > #card3 .shadow,
+.home #card3cb:checked ~ .carousel > div > #card3 .other-shadow {
+  margin: auto;
+  height: 50rem;
+  width: 30rem;
+  left: 10rem;
+  right: 0;
+  filter: blur(3rem);
+  transform-origin: 100% 100%;
+  transform-style: flat;
+  transform: translate3d(-15rem, 0, -35rem) rotateX(90deg) skewX(30deg) scaleX(1.5);
+  transition: all 0.5s ease-in-out;
+  bottom: -16.1rem;
+}
+.home #card3cb:checked ~ .carousel > div > #card3 .shadow:before,
+.home #card3cb:checked ~ .carousel > div > #card3 .other-shadow:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(rgba(241, 43, 43, 0), #000);
+  border-radius: 2rem;
+  transform: translate3d(0, 0, -35rem);
+  opacity: 0;
+}
+.home #card4cb:checked ~ .carousel > div > #card4 .shadow,
+.home #card4cb:checked ~ .carousel > div > #card4 .other-shadow {
+  margin: auto;
+  height: 50rem;
+  width: 30rem;
+  left: 10rem;
+  right: 0;
+  filter: blur(3rem);
+  transform-origin: 100% 100%;
+  transform-style: flat;
+  transform: translate3d(-15rem, 0, -35rem) rotateX(90deg) skewX(30deg) scaleX(1.5);
+  transition: all 0.5s ease-in-out;
+  bottom: -16.1rem;
+}
+.home #card4cb:checked ~ .carousel > div > #card4 .shadow:before,
+.home #card4cb:checked ~ .carousel > div > #card4 .other-shadow:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(rgba(241, 43, 43, 0), #000);
+  border-radius: 2rem;
+  transform: translate3d(0, 0, -35rem);
+  opacity: 0;
+}
+.home #card5cb:checked ~ .carousel > div > #card5 .shadow,
+.home #card5cb:checked ~ .carousel > div > #card5 .other-shadow {
+  margin: auto;
+  height: 50rem;
+  width: 30rem;
+  left: 10rem;
+  right: 0;
+  filter: blur(3rem);
+  transform-origin: 100% 100%;
+  transform-style: flat;
+  transform: translate3d(-15rem, 0, -35rem) rotateX(90deg) skewX(30deg) scaleX(1.5);
+  transition: all 0.5s ease-in-out;
+  bottom: -16.1rem;
+}
+.home #card5cb:checked ~ .carousel > div > #card5 .shadow:before,
+.home #card5cb:checked ~ .carousel > div > #card5 .other-shadow:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(rgba(241, 43, 43, 0), #000);
+  border-radius: 2rem;
+  transform: translate3d(0, 0, -35rem);
+  opacity: 0;
+}
+.home #card6cb:checked ~ .carousel > div > #card6 .shadow,
+.home #card6cb:checked ~ .carousel > div > #card6 .other-shadow {
+  margin: auto;
+  height: 50rem;
+  width: 30rem;
+  left: 10rem;
+  right: 0;
+  filter: blur(3rem);
+  transform-origin: 100% 100%;
+  transform-style: flat;
+  transform: translate3d(-15rem, 0, -35rem) rotateX(90deg) skewX(30deg) scaleX(1.5);
+  transition: all 0.5s ease-in-out;
+  bottom: -16.1rem;
+}
+.home #card6cb:checked ~ .carousel > div > #card6 .shadow:before,
+.home #card6cb:checked ~ .carousel > div > #card6 .other-shadow:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(rgba(241, 43, 43, 0), #000);
+  border-radius: 2rem;
+  transform: translate3d(0, 0, -35rem);
+  opacity: 0;
+}
+.home #card7cb:checked ~ .carousel > div > #card7 .shadow,
+.home #card7cb:checked ~ .carousel > div > #card7 .other-shadow {
+  margin: auto;
+  height: 50rem;
+  width: 30rem;
+  left: 10rem;
+  right: 0;
+  filter: blur(3rem);
+  transform-origin: 100% 100%;
+  transform-style: flat;
+  transform: translate3d(-15rem, 0, -35rem) rotateX(90deg) skewX(30deg) scaleX(1.5);
+  transition: all 0.5s ease-in-out;
+  bottom: -16.1rem;
+}
+.home #card7cb:checked ~ .carousel > div > #card7 .shadow:before,
+.home #card7cb:checked ~ .carousel > div > #card7 .other-shadow:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(rgba(241, 43, 43, 0), #000);
+  border-radius: 2rem;
+  transform: translate3d(0, 0, -35rem);
+  opacity: 0;
+}
+.home #card8cb:checked ~ .carousel > div > #card8 .shadow,
+.home #card8cb:checked ~ .carousel > div > #card8 .other-shadow {
+  margin: auto;
+  height: 50rem;
+  width: 30rem;
+  left: 10rem;
+  right: 0;
+  filter: blur(3rem);
+  transform-origin: 100% 100%;
+  transform-style: flat;
+  transform: translate3d(-15rem, 0, -35rem) rotateX(90deg) skewX(30deg) scaleX(1.5);
+  transition: all 0.5s ease-in-out;
+  bottom: -16.1rem;
+}
+.home #card8cb:checked ~ .carousel > div > #card8 .shadow:before,
+.home #card8cb:checked ~ .carousel > div > #card8 .other-shadow:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(rgba(241, 43, 43, 0), #000);
+  border-radius: 2rem;
+  transform: translate3d(0, 0, -35rem);
+  opacity: 0;
+}
+.home #card9cb:checked ~ .carousel > div > #card9 .shadow,
+.home #card9cb:checked ~ .carousel > div > #card9 .other-shadow {
+  margin: auto;
+  height: 50rem;
+  width: 30rem;
+  left: 10rem;
+  right: 0;
+  filter: blur(3rem);
+  transform-origin: 100% 100%;
+  transform-style: flat;
+  transform: translate3d(-15rem, 0, -35rem) rotateX(90deg) skewX(30deg) scaleX(1.5);
+  transition: all 0.5s ease-in-out;
+  bottom: -16.1rem;
+}
+.home #card9cb:checked ~ .carousel > div > #card9 .shadow:before,
+.home #card9cb:checked ~ .carousel > div > #card9 .other-shadow:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(rgba(241, 43, 43, 0), #000);
+  border-radius: 2rem;
+  transform: translate3d(0, 0, -35rem);
+  opacity: 0;
+}
+.home #card10cb:checked ~ .carousel > div > #card10 .shadow,
+.home #card10cb:checked ~ .carousel > div > #card10 .other-shadow {
+  margin: auto;
+  height: 50rem;
+  width: 30rem;
+  left: 10rem;
+  right: 0;
+  filter: blur(3rem);
+  transform-origin: 100% 100%;
+  transform-style: flat;
+  transform: translate3d(-15rem, 0, -35rem) rotateX(90deg) skewX(30deg) scaleX(1.5);
+  transition: all 0.5s ease-in-out;
+  bottom: -16.1rem;
+}
+.home #card10cb:checked ~ .carousel > div > #card10 .shadow:before,
+.home #card10cb:checked ~ .carousel > div > #card10 .other-shadow:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(rgba(241, 43, 43, 0), #000);
+  border-radius: 2rem;
+  transform: translate3d(0, 0, -35rem);
+  opacity: 0;
+}
+.home #card11cb:checked ~ .carousel > div > #card11 .shadow,
+.home #card11cb:checked ~ .carousel > div > #card11 .other-shadow {
+  margin: auto;
+  height: 50rem;
+  width: 30rem;
+  left: 10rem;
+  right: 0;
+  filter: blur(3rem);
+  transform-origin: 100% 100%;
+  transform-style: flat;
+  transform: translate3d(-15rem, 0, -35rem) rotateX(90deg) skewX(30deg) scaleX(1.5);
+  transition: all 0.5s ease-in-out;
+  bottom: -16.1rem;
+}
+.home #card11cb:checked ~ .carousel > div > #card11 .shadow:before,
+.home #card11cb:checked ~ .carousel > div > #card11 .other-shadow:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(rgba(241, 43, 43, 0), #000);
+  border-radius: 2rem;
+  transform: translate3d(0, 0, -35rem);
+  opacity: 0;
+}
+.home #card12cb:checked ~ .carousel > div > #card12 .shadow,
+.home #card12cb:checked ~ .carousel > div > #card12 .other-shadow {
+  margin: auto;
+  height: 50rem;
+  width: 30rem;
+  left: 10rem;
+  right: 0;
+  filter: blur(3rem);
+  transform-origin: 100% 100%;
+  transform-style: flat;
+  transform: translate3d(-15rem, 0, -35rem) rotateX(90deg) skewX(30deg) scaleX(1.5);
+  transition: all 0.5s ease-in-out;
+  bottom: -16.1rem;
+}
+.home #card12cb:checked ~ .carousel > div > #card12 .shadow:before,
+.home #card12cb:checked ~ .carousel > div > #card12 .other-shadow:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(rgba(241, 43, 43, 0), #000);
+  border-radius: 2rem;
+  transform: translate3d(0, 0, -35rem);
+  opacity: 0;
+}
+
+.home #card1cb:checked ~ .carousel > div > #card1 .shadow,
+.home #card1cb:checked ~ .carousel > div > #card1 .other-shadow {
+  bottom: -11.5rem;
+}
+
+@keyframes shadowhover {
+  10% {
+    opacity: 0;
+  }
+  11% {
+    transform: translate3d(0rem, 35rem, -35rem) rotateY(-90deg) skewY(20deg) scaleY(0.2);
+    opacity: 0.1;
+  }
+  28% {
+    transform: translate3d(0rem, 0, -35rem) rotateY(-180deg) scaleY(0.5);
+    opacity: 0.2;
+  }
+  38% {
+    transform: translate3d(0, 0, -35rem) rotateY(-90deg) skewY(-20deg);
+    opacity: 0.1;
+  }
+  50% {
+    transform: translate3d(0, 0, -35rem) rotateY(-70deg) skewY(-15deg);
+    opacity: 0.1;
+  }
+  100% {
+    transform: translate3d(0, 0, -35rem) rotateY(20deg);
+    opacity: 0.3;
+  }
+}
+@keyframes wiggle {
+  50% {
+    transform: rotate(1deg);
+  }
+}
+.other-shadow {
+  display: none;
+}
+
+#card1rotate:checked ~ .carousel > div > #card1 .rotate {
+  transform: translate3d(0, 0, 40rem) rotateY(180deg);
+}
+#card1rotate:checked ~ .carousel > div > #card1 .shadow {
+  opacity: 0 !important;
+}
+#card1rotate:checked ~ .carousel > div > #card1 .other-shadow {
+  display: block;
+}
+#card1rotate:checked ~ .carousel > div > #card1 .other-shadow:before, #card1rotate:checked ~ .carousel > div > #card1 .other-shadow:after {
+  animation: shadowhoverqr 0.6666666667s forwards linear;
+}
+
+.home #card1cb:checked ~ .carousel > div > #card1 .rotate {
+  transition: all 0.5s ease-in-out;
+  pointer-events: none;
+}
+.home #card1cb:checked ~ .carousel > div > #card1 label {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate3d(0, 0, 5rem);
+  cursor: help;
+}
+
+.back img {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  border: 0.7rem solid #c0e909;
+  mix-blend-mode: hard-light;
+  box-shadow: 0 0 0 0.7rem #434446;
+}
+
+.card .back > div:before {
+  background: #434446;
+  border: 0.7rem solid #8a8986;
+  box-shadow: 0 0 0 0.7rem #c0e909;
+  width: 6.15rem;
+  height: 6.6rem;
+  margin: auto;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  display: none;
+}
+
+@keyframes shadowhoverqr {
+  50% {
+    transform: translate3d(0, 0, -35rem) rotateY(20deg) skewX(60deg) scaleY(0.7);
+    opacity: 0.1;
+  }
+  100% {
+    transform: translate3d(0, 0, -35rem) rotateY(20deg) skewX(0deg) scaleY(0.5);
+    opacity: 0.1;
+  }
+}
+.carousel-card-holder:nth-of-type(0n) .card2 .front:after,
+.carousel-card-holder:nth-of-type(0n) .card2 .back:after {
+  transform: translate3d(-35rem, 0, 0);
+}
+
+.carousel-card-holder:nth-of-type(1n) .card2 .front:after,
+.carousel-card-holder:nth-of-type(1n) .card2 .back:after {
+  transform: translate3d(-37rem, 0, 0);
+}
+
+.carousel-card-holder:nth-of-type(2n) .card2 .front:after,
+.carousel-card-holder:nth-of-type(2n) .card2 .back:after {
+  transform: translate3d(-39rem, 0, 0);
+}
+
+.carousel-card-holder:nth-of-type(3n) .card2 .front:after,
+.carousel-card-holder:nth-of-type(3n) .card2 .back:after {
+  transform: translate3d(-41rem, 0, 0);
+}
+
+.card2 .card-row * {
+  color: #fff;
+}
+.card2 .front {
+  background: #434446;
+  box-shadow: inset 0 0 0 0.5rem #c0e909;
+}
+.card2 .front:after,
+.card2 .back:after {
+  transform: translate3d(-37rem, 0, 0);
+}
+.card2 .border-bottom {
+  border-bottom: 0.3rem solid #373739;
+}
+.card2 .header {
+  border-bottom: 0.25rem solid currentColor;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.card2 .back {
+  color: currentColor;
+  background: currentColor;
+  box-shadow: inset 0 0 0 0.5rem #c0e909;
+}
+.card2 .back > div {
+  background: linear-gradient(-80deg, rgba(67, 68, 70, 0.1), rgba(192, 233, 9, 0.2), rgba(67, 68, 70, 0.1));
+}
+.card2 .back > div:before {
+  content: "";
+  width: 5rem;
+  height: 5rem;
+  margin: auto;
+  bottom: 0;
+  right: 0;
+  transform: rotate(45deg);
+  background: currentColor;
+  z-index: 1;
+  border: solid 0.75rem #fff;
+  border-radius: 1rem;
+}
+.card2 .photo > * {
+  border-radius: 1rem;
+  border: 0.2rem solid #434446;
+  background: radial-gradient(#434446, #000);
+  overflow: hidden;
+}
+.card2 .photo .l2 {
+  filter: blur(2rem) brightness(0.9);
+  transform: scale(1.2);
+}
+.card2 .photo * {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+}
+
+@keyframes rotate22 {
+  50% {
+    transform: translate3d(0, 0, -1rem) rotateY(-200deg) rotateX(5deg);
+  }
+  100% {
+    transform: rotateY(-360deg) rotateX(2deg);
+  }
+}
+@keyframes shine22 {
+  15%, 65% {
+    transform: translate3d(0, 0, 0);
+  }
+  21%, 71% {
+    transform: translate3d(-70rem, 0, 0);
+  }
+  50% {
+    transform: translate3d(-55rem, 0, 0);
+  }
+}
+.card3 {
+  height: 40rem;
+  margin: 5rem -3rem -5rem;
+  color: #434446;
+  font-size: 1.2rem;
+  transition: all 0.5s ease-in-out;
+}
+.card3 h3 {
+  font-weight: 500;
+}
+.card3 .front {
+  transform: translate3d(0, 0, 0.1rem);
+  background: #434446;
+  box-shadow: inset 0 0 0.5rem rgba(192, 233, 9, 0.1);
+  padding: 0.5rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: solid 4px #000;
+}
+.card3 .front .border-left {
+  border-left: 0.2rem solid rgba(192, 233, 9, 0.1);
+  padding: 0 2rem;
+  margin-left: 1rem;
+}
+.card3 .front .photo {
+  flex: 1 1 auto;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 0 1rem #434446;
+  border-radius: 1rem;
+  margin: 0.5rem;
+}
+.card3 .front .photo img:nth-of-type(1) {
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  right: -100%;
+  bottom: -100%;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  filter: blur(2rem);
+  opacity: 0.5;
+  -webkit-mask-image: linear-gradient(#000, rgba(241, 43, 43, 0));
+}
+.card3 .front .photo img:nth-of-type(2) {
+  margin: auto;
+  max-height: 98%;
+  max-width: 98%;
+  width: fit-content;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  box-shadow: 0 0 2rem #434446, 0 0 4rem #434446;
+  border-radius: 1rem;
+}
+.card3 .front .photo img {
+  filter: saturate(1.1);
+}
+.card3 .card-row {
+  background: #c0e909;
+  margin: 0.5rem;
+  padding: 1.5rem 1rem 0.25rem;
+  border-radius: 50% 50% 0.75rem 0.75rem/0.25rem 0.25rem 0.75rem 0.75rem;
+}
+.card3 .front {
+  border-radius: 2rem;
+  overflow: hidden;
+}
+.card3 .front:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  height: 120%;
+  width: 400%;
+  background: linear-gradient(60deg, #434446, rgba(67, 68, 70, 0.25) 50%, rgba(241, 43, 43, 0), rgba(241, 43, 43, 0), rgba(255, 255, 255, 0.1), rgba(241, 43, 43, 0), rgba(241, 43, 43, 0), rgba(255, 255, 255, 0.25) 75%, #fff);
+  opacity: 0.5;
+  z-index: 1;
+  pointer-events: none;
+  animation: none !important;
+  transform: translate3d(-50%, 0, 0);
+  transition: all 0.5s ease-in-out;
+}
+.card3:hover {
+  transform: translate3d(0, 0, 1rem);
+}
+.card3:hover .front:after {
+  transform: translate3d(-55%, 0, 0);
+}
+
+@media (orientation: landscape) {
+  .home .carousel:before, .home .carousel:after {
+    content: "";
+    display: block;
+    width: 50vw;
+    height: 100vh;
+    top: 0;
+    background: linear-gradient(rgb(136, 130, 136), rgba(241, 43, 43, 0));
+    animation: back 5s infinite linear;
+    position: absolute;
+    right: 0;
+    transform: translate3d(15rem, -14rem, -33rem) skewX(-45deg);
+    opacity: 0.1;
+  }
+  .home .carousel:after {
+    transform: translate3d(-28rem, -14rem, -33rem) skewX(-45deg);
+    background: linear-gradient(rgb(136, 130, 136), rgba(241, 43, 43, 0));
+    opacity: 0.03;
+    animation: back 10s infinite linear reverse;
+  }
+}
+
+@keyframes back {
+  33% {
+    opacity: 0.05;
+    -webkit-mask-image: linear-gradient(45deg, #000, rgba(241, 43, 43, 0));
+  }
+  66% {
+    opacity: 0.1;
+    -webkit-mask-image: linear-gradient(-45deg, #000, rgba(241, 43, 43, 0));
+  }
+}
+input {
+  position: absolute;
+  opacity: 0;
+}
+
+.top-bit {
+  height: 90vh;
+  width: 100%;
+}
+.top-bit:before {
+  content: "";
+  position: absolute;
+  left: -35%;
+  top: -51.5%;
+  width: 165%;
+  height: 152%;
+  background: radial-gradient(#2a2b2c, rgba(241, 43, 43, 0), rgba(192, 233, 9, 0.1)), #434446;
+  transform: translate3d(0, 0, -60rem);
+}
+.art .top-bit:before {
+  background: linear-gradient(#000, rgba(241, 43, 43, 0)), radial-gradient(#2a2b2c, rgba(241, 43, 43, 0), rgba(192, 233, 9, 0.1)), #434446;
+}
+
+.prev-next-btns {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  width: 90%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  margin: auto;
+  transition: all 0.25s ease-in-out;
+}
+.prev-next-btns > * {
+  flex: 1 1 auto;
+}
+.art .prev-next-btns {
+  height: 100vh;
+}
+
+#c1:checked ~ #p1 {
+  display: block;
+}
+
+#card1cb:checked ~ .carousel > div > #card1 {
+  width: 24rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  margin: auto;
+  transform: translate3d(0, 60rem, 25rem) scale(0.72);
+  animation: carousel-top 0.5s forwards;
+  top: 2rem;
+}
+#card1cb:checked ~ .carousel > div > #card1 .hover,
+#card1cb:checked ~ .carousel > div > #card1 .hover .front:after {
+  transition: all 0.5s ease-in-out;
+}
+#card1cb:checked ~ .carousel > div > #card1:hover > .hover {
+  transform: translate3d(0, 0, 1rem);
+}
+#card1cb:checked ~ .carousel > div > #card1:hover > .hover .front:after {
+  left: -2rem;
+}
+@media (min-width: 1000px) {
+  #card1cb:checked ~ .carousel > div > #card1:hover ~ .prev-next-btns > * > * {
+    filter: blur(0.1rem);
+  }
+}
+#card1cb:checked ~ .carousel > div > #card1:hover .shadow {
+  left: 5rem;
+}
+.art #card1cb:checked ~ .carousel > div > #card1 {
+  transform: translate3d(0, 0, 25rem);
+  top: 29rem;
+}
+#card1cb:checked ~ .carousel > div > #card1 .card,
+#card1cb:checked ~ .carousel > div > #card1 .card2 {
+  animation: rotate 3s forwards;
+}
+#card1cb:checked ~ .carousel > div > #card1 .card h2,
+#card1cb:checked ~ .carousel > div > #card1 .card2 h2 {
+  display: block;
+}
+#card1cb:checked ~ .carousel > div > #card1 .card .photo > * {
+  animation: rotate2 3s forwards;
+}
+#card1cb:checked ~ .carousel > div > #card1 .front:after,
+#card1cb:checked ~ .carousel > div > #card1 .back:after {
+  animation: shine1 3s forwards;
+  opacity: 1;
+}
+#card1cb:checked ~ .carousel > div > #card1 .shadow {
+  display: none;
+}
+.home #card1cb:checked ~ .carousel > div > #card1 .shadow {
+  display: block;
+  transform: translate3d(-15rem, 0, -35rem) rotateX(90deg) skewX(30deg) scaleX(1.5);
+}
+.home #card1cb:checked ~ .carousel > div > #card1 .shadow:after, .home #card1cb:checked ~ .carousel > div > #card1 .shadow:before {
+  animation: shadowhover 3s 0.1s forwards linear;
+  opacity: 0;
+}
+#card1cb:checked ~ .carousel > div > #card1 .card2 {
+  margin-top: 2rem;
+}
+#card1cb:checked ~ .carousel > div > #card1 .card2 .front:after,
+#card1cb:checked ~ .carousel > div > #card1 .card2 .back:after {
+  opacity: 0.5;
+}
+#card1cb:checked ~ .carousel > div > #card1 .card3 {
+  top: 0;
+  bottom: 0;
+  aspect-ratio: 1.1/1;
+  height: 99vmin;
+  max-height: 99vh;
+  max-width: 99vw;
+  left: calc(-12rem - 100%);
+  right: calc(-12rem - 100%);
+  margin: auto;
+  position: absolute;
+}
+@media (orientation: portrait) {
+  #card1cb:checked ~ .carousel > div > #card1 .card3 {
+    height: 144vmin;
+  }
+}
+#card1cb:checked ~ .carousel > div > #card1 .card3 .front:after,
+#card1cb:checked ~ .carousel > div > #card1 .card3 .back:after {
+  opacity: 0.3;
+}
+@keyframes carousel-top {
+  70% {
+    transform: translate3d(0, -5rem, 25rem) scale(0.72);
+  }
+  100% {
+    transform: translate3d(0, 0, 25rem) scale(0.72);
+  }
+}
+#card1cb:checked ~ .carousel > * > .prev-next-btns > * > #next1btn,
+#card1cb:checked ~ .carousel > * > .prev-next-btns > * > #prev1btn {
+  display: block;
+}
+
+#c2:checked ~ #p2 {
+  display: block;
+}
+
+#card2cb:checked ~ .carousel > div > #card2 {
+  width: 24rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  margin: auto;
+  transform: translate3d(0, 60rem, 25rem) scale(0.72);
+  animation: carousel-top 0.5s forwards;
+  top: 2rem;
+}
+#card2cb:checked ~ .carousel > div > #card2 .hover,
+#card2cb:checked ~ .carousel > div > #card2 .hover .front:after {
+  transition: all 0.5s ease-in-out;
+}
+#card2cb:checked ~ .carousel > div > #card2:hover > .hover {
+  transform: translate3d(0, 0, 1rem);
+}
+#card2cb:checked ~ .carousel > div > #card2:hover > .hover .front:after {
+  left: -2rem;
+}
+@media (min-width: 1000px) {
+  #card2cb:checked ~ .carousel > div > #card2:hover ~ .prev-next-btns > * > * {
+    filter: blur(0.1rem);
+  }
+}
+#card2cb:checked ~ .carousel > div > #card2:hover .shadow {
+  left: 5rem;
+}
+.art #card2cb:checked ~ .carousel > div > #card2 {
+  transform: translate3d(0, 0, 25rem);
+  top: 29rem;
+}
+#card2cb:checked ~ .carousel > div > #card2 .card,
+#card2cb:checked ~ .carousel > div > #card2 .card2 {
+  animation: rotate 3s forwards;
+}
+#card2cb:checked ~ .carousel > div > #card2 .card h2,
+#card2cb:checked ~ .carousel > div > #card2 .card2 h2 {
+  display: block;
+}
+#card2cb:checked ~ .carousel > div > #card2 .card .photo > * {
+  animation: rotate2 3s forwards;
+}
+#card2cb:checked ~ .carousel > div > #card2 .front:after,
+#card2cb:checked ~ .carousel > div > #card2 .back:after {
+  animation: shine1 3s forwards;
+  opacity: 1;
+}
+#card2cb:checked ~ .carousel > div > #card2 .shadow {
+  display: none;
+}
+.home #card2cb:checked ~ .carousel > div > #card2 .shadow {
+  display: block;
+  transform: translate3d(-15rem, 0, -35rem) rotateX(90deg) skewX(30deg) scaleX(1.5);
+}
+.home #card2cb:checked ~ .carousel > div > #card2 .shadow:after, .home #card2cb:checked ~ .carousel > div > #card2 .shadow:before {
+  animation: shadowhover 3s 0.1s forwards linear;
+  opacity: 0;
+}
+#card2cb:checked ~ .carousel > div > #card2 .card2 {
+  margin-top: 2rem;
+}
+#card2cb:checked ~ .carousel > div > #card2 .card2 .front:after,
+#card2cb:checked ~ .carousel > div > #card2 .card2 .back:after {
+  opacity: 0.5;
+}
+#card2cb:checked ~ .carousel > div > #card2 .card3 {
+  top: 0;
+  bottom: 0;
+  aspect-ratio: 1.1/1;
+  height: 99vmin;
+  max-height: 99vh;
+  max-width: 99vw;
+  left: calc(-12rem - 100%);
+  right: calc(-12rem - 100%);
+  margin: auto;
+  position: absolute;
+}
+@media (orientation: portrait) {
+  #card2cb:checked ~ .carousel > div > #card2 .card3 {
+    height: 144vmin;
+  }
+}
+#card2cb:checked ~ .carousel > div > #card2 .card3 .front:after,
+#card2cb:checked ~ .carousel > div > #card2 .card3 .back:after {
+  opacity: 0.3;
+}
+@keyframes carousel-top {
+  70% {
+    transform: translate3d(0, -5rem, 25rem) scale(0.72);
+  }
+  100% {
+    transform: translate3d(0, 0, 25rem) scale(0.72);
+  }
+}
+#card2cb:checked ~ .carousel > * > .prev-next-btns > * > #next2btn,
+#card2cb:checked ~ .carousel > * > .prev-next-btns > * > #prev2btn {
+  display: block;
+}
+
+#c3:checked ~ #p3 {
+  display: block;
+}
+
+#card3cb:checked ~ .carousel > div > #card3 {
+  width: 24rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  margin: auto;
+  transform: translate3d(0, 60rem, 25rem) scale(0.72);
+  animation: carousel-top 0.5s forwards;
+  top: 2rem;
+}
+#card3cb:checked ~ .carousel > div > #card3 .hover,
+#card3cb:checked ~ .carousel > div > #card3 .hover .front:after {
+  transition: all 0.5s ease-in-out;
+}
+#card3cb:checked ~ .carousel > div > #card3:hover > .hover {
+  transform: translate3d(0, 0, 1rem);
+}
+#card3cb:checked ~ .carousel > div > #card3:hover > .hover .front:after {
+  left: -2rem;
+}
+@media (min-width: 1000px) {
+  #card3cb:checked ~ .carousel > div > #card3:hover ~ .prev-next-btns > * > * {
+    filter: blur(0.1rem);
+  }
+}
+#card3cb:checked ~ .carousel > div > #card3:hover .shadow {
+  left: 5rem;
+}
+.art #card3cb:checked ~ .carousel > div > #card3 {
+  transform: translate3d(0, 0, 25rem);
+  top: 29rem;
+}
+#card3cb:checked ~ .carousel > div > #card3 .card,
+#card3cb:checked ~ .carousel > div > #card3 .card2 {
+  animation: rotate 3s forwards;
+}
+#card3cb:checked ~ .carousel > div > #card3 .card h2,
+#card3cb:checked ~ .carousel > div > #card3 .card2 h2 {
+  display: block;
+}
+#card3cb:checked ~ .carousel > div > #card3 .card .photo > * {
+  animation: rotate2 3s forwards;
+}
+#card3cb:checked ~ .carousel > div > #card3 .front:after,
+#card3cb:checked ~ .carousel > div > #card3 .back:after {
+  animation: shine1 3s forwards;
+  opacity: 1;
+}
+#card3cb:checked ~ .carousel > div > #card3 .shadow {
+  display: none;
+}
+.home #card3cb:checked ~ .carousel > div > #card3 .shadow {
+  display: block;
+  transform: translate3d(-15rem, 0, -35rem) rotateX(90deg) skewX(30deg) scaleX(1.5);
+}
+.home #card3cb:checked ~ .carousel > div > #card3 .shadow:after, .home #card3cb:checked ~ .carousel > div > #card3 .shadow:before {
+  animation: shadowhover 3s 0.1s forwards linear;
+  opacity: 0;
+}
+#card3cb:checked ~ .carousel > div > #card3 .card2 {
+  margin-top: 2rem;
+}
+#card3cb:checked ~ .carousel > div > #card3 .card2 .front:after,
+#card3cb:checked ~ .carousel > div > #card3 .card2 .back:after {
+  opacity: 0.5;
+}
+#card3cb:checked ~ .carousel > div > #card3 .card3 {
+  top: 0;
+  bottom: 0;
+  aspect-ratio: 1.1/1;
+  height: 99vmin;
+  max-height: 99vh;
+  max-width: 99vw;
+  left: calc(-12rem - 100%);
+  right: calc(-12rem - 100%);
+  margin: auto;
+  position: absolute;
+}
+@media (orientation: portrait) {
+  #card3cb:checked ~ .carousel > div > #card3 .card3 {
+    height: 144vmin;
+  }
+}
+#card3cb:checked ~ .carousel > div > #card3 .card3 .front:after,
+#card3cb:checked ~ .carousel > div > #card3 .card3 .back:after {
+  opacity: 0.3;
+}
+@keyframes carousel-top {
+  70% {
+    transform: translate3d(0, -5rem, 25rem) scale(0.72);
+  }
+  100% {
+    transform: translate3d(0, 0, 25rem) scale(0.72);
+  }
+}
+#card3cb:checked ~ .carousel > * > .prev-next-btns > * > #next3btn,
+#card3cb:checked ~ .carousel > * > .prev-next-btns > * > #prev3btn {
+  display: block;
+}
+
+#c4:checked ~ #p4 {
+  display: block;
+}
+
+#card4cb:checked ~ .carousel > div > #card4 {
+  width: 24rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  margin: auto;
+  transform: translate3d(0, 60rem, 25rem) scale(0.72);
+  animation: carousel-top 0.5s forwards;
+  top: 2rem;
+}
+#card4cb:checked ~ .carousel > div > #card4 .hover,
+#card4cb:checked ~ .carousel > div > #card4 .hover .front:after {
+  transition: all 0.5s ease-in-out;
+}
+#card4cb:checked ~ .carousel > div > #card4:hover > .hover {
+  transform: translate3d(0, 0, 1rem);
+}
+#card4cb:checked ~ .carousel > div > #card4:hover > .hover .front:after {
+  left: -2rem;
+}
+@media (min-width: 1000px) {
+  #card4cb:checked ~ .carousel > div > #card4:hover ~ .prev-next-btns > * > * {
+    filter: blur(0.1rem);
+  }
+}
+#card4cb:checked ~ .carousel > div > #card4:hover .shadow {
+  left: 5rem;
+}
+.art #card4cb:checked ~ .carousel > div > #card4 {
+  transform: translate3d(0, 0, 25rem);
+  top: 29rem;
+}
+#card4cb:checked ~ .carousel > div > #card4 .card,
+#card4cb:checked ~ .carousel > div > #card4 .card2 {
+  animation: rotate 3s forwards;
+}
+#card4cb:checked ~ .carousel > div > #card4 .card h2,
+#card4cb:checked ~ .carousel > div > #card4 .card2 h2 {
+  display: block;
+}
+#card4cb:checked ~ .carousel > div > #card4 .card .photo > * {
+  animation: rotate2 3s forwards;
+}
+#card4cb:checked ~ .carousel > div > #card4 .front:after,
+#card4cb:checked ~ .carousel > div > #card4 .back:after {
+  animation: shine1 3s forwards;
+  opacity: 1;
+}
+#card4cb:checked ~ .carousel > div > #card4 .shadow {
+  display: none;
+}
+.home #card4cb:checked ~ .carousel > div > #card4 .shadow {
+  display: block;
+  transform: translate3d(-15rem, 0, -35rem) rotateX(90deg) skewX(30deg) scaleX(1.5);
+}
+.home #card4cb:checked ~ .carousel > div > #card4 .shadow:after, .home #card4cb:checked ~ .carousel > div > #card4 .shadow:before {
+  animation: shadowhover 3s 0.1s forwards linear;
+  opacity: 0;
+}
+#card4cb:checked ~ .carousel > div > #card4 .card2 {
+  margin-top: 2rem;
+}
+#card4cb:checked ~ .carousel > div > #card4 .card2 .front:after,
+#card4cb:checked ~ .carousel > div > #card4 .card2 .back:after {
+  opacity: 0.5;
+}
+#card4cb:checked ~ .carousel > div > #card4 .card3 {
+  top: 0;
+  bottom: 0;
+  aspect-ratio: 1.1/1;
+  height: 99vmin;
+  max-height: 99vh;
+  max-width: 99vw;
+  left: calc(-12rem - 100%);
+  right: calc(-12rem - 100%);
+  margin: auto;
+  position: absolute;
+}
+@media (orientation: portrait) {
+  #card4cb:checked ~ .carousel > div > #card4 .card3 {
+    height: 144vmin;
+  }
+}
+#card4cb:checked ~ .carousel > div > #card4 .card3 .front:after,
+#card4cb:checked ~ .carousel > div > #card4 .card3 .back:after {
+  opacity: 0.3;
+}
+@keyframes carousel-top {
+  70% {
+    transform: translate3d(0, -5rem, 25rem) scale(0.72);
+  }
+  100% {
+    transform: translate3d(0, 0, 25rem) scale(0.72);
+  }
+}
+#card4cb:checked ~ .carousel > * > .prev-next-btns > * > #next4btn,
+#card4cb:checked ~ .carousel > * > .prev-next-btns > * > #prev4btn {
+  display: block;
+}
+
+#c5:checked ~ #p5 {
+  display: block;
+}
+
+#card5cb:checked ~ .carousel > div > #card5 {
+  width: 24rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  margin: auto;
+  transform: translate3d(0, 60rem, 25rem) scale(0.72);
+  animation: carousel-top 0.5s forwards;
+  top: 2rem;
+}
+#card5cb:checked ~ .carousel > div > #card5 .hover,
+#card5cb:checked ~ .carousel > div > #card5 .hover .front:after {
+  transition: all 0.5s ease-in-out;
+}
+#card5cb:checked ~ .carousel > div > #card5:hover > .hover {
+  transform: translate3d(0, 0, 1rem);
+}
+#card5cb:checked ~ .carousel > div > #card5:hover > .hover .front:after {
+  left: -2rem;
+}
+@media (min-width: 1000px) {
+  #card5cb:checked ~ .carousel > div > #card5:hover ~ .prev-next-btns > * > * {
+    filter: blur(0.1rem);
+  }
+}
+#card5cb:checked ~ .carousel > div > #card5:hover .shadow {
+  left: 5rem;
+}
+.art #card5cb:checked ~ .carousel > div > #card5 {
+  transform: translate3d(0, 0, 25rem);
+  top: 29rem;
+}
+#card5cb:checked ~ .carousel > div > #card5 .card,
+#card5cb:checked ~ .carousel > div > #card5 .card2 {
+  animation: rotate 3s forwards;
+}
+#card5cb:checked ~ .carousel > div > #card5 .card h2,
+#card5cb:checked ~ .carousel > div > #card5 .card2 h2 {
+  display: block;
+}
+#card5cb:checked ~ .carousel > div > #card5 .card .photo > * {
+  animation: rotate2 3s forwards;
+}
+#card5cb:checked ~ .carousel > div > #card5 .front:after,
+#card5cb:checked ~ .carousel > div > #card5 .back:after {
+  animation: shine1 3s forwards;
+  opacity: 1;
+}
+#card5cb:checked ~ .carousel > div > #card5 .shadow {
+  display: none;
+}
+.home #card5cb:checked ~ .carousel > div > #card5 .shadow {
+  display: block;
+  transform: translate3d(-15rem, 0, -35rem) rotateX(90deg) skewX(30deg) scaleX(1.5);
+}
+.home #card5cb:checked ~ .carousel > div > #card5 .shadow:after, .home #card5cb:checked ~ .carousel > div > #card5 .shadow:before {
+  animation: shadowhover 3s 0.1s forwards linear;
+  opacity: 0;
+}
+#card5cb:checked ~ .carousel > div > #card5 .card2 {
+  margin-top: 2rem;
+}
+#card5cb:checked ~ .carousel > div > #card5 .card2 .front:after,
+#card5cb:checked ~ .carousel > div > #card5 .card2 .back:after {
+  opacity: 0.5;
+}
+#card5cb:checked ~ .carousel > div > #card5 .card3 {
+  top: 0;
+  bottom: 0;
+  aspect-ratio: 1.1/1;
+  height: 99vmin;
+  max-height: 99vh;
+  max-width: 99vw;
+  left: calc(-12rem - 100%);
+  right: calc(-12rem - 100%);
+  margin: auto;
+  position: absolute;
+}
+@media (orientation: portrait) {
+  #card5cb:checked ~ .carousel > div > #card5 .card3 {
+    height: 144vmin;
+  }
+}
+#card5cb:checked ~ .carousel > div > #card5 .card3 .front:after,
+#card5cb:checked ~ .carousel > div > #card5 .card3 .back:after {
+  opacity: 0.3;
+}
+@keyframes carousel-top {
+  70% {
+    transform: translate3d(0, -5rem, 25rem) scale(0.72);
+  }
+  100% {
+    transform: translate3d(0, 0, 25rem) scale(0.72);
+  }
+}
+#card5cb:checked ~ .carousel > * > .prev-next-btns > * > #next5btn,
+#card5cb:checked ~ .carousel > * > .prev-next-btns > * > #prev5btn {
+  display: block;
+}
+
+#c6:checked ~ #p6 {
+  display: block;
+}
+
+#card6cb:checked ~ .carousel > div > #card6 {
+  width: 24rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  margin: auto;
+  transform: translate3d(0, 60rem, 25rem) scale(0.72);
+  animation: carousel-top 0.5s forwards;
+  top: 2rem;
+}
+#card6cb:checked ~ .carousel > div > #card6 .hover,
+#card6cb:checked ~ .carousel > div > #card6 .hover .front:after {
+  transition: all 0.5s ease-in-out;
+}
+#card6cb:checked ~ .carousel > div > #card6:hover > .hover {
+  transform: translate3d(0, 0, 1rem);
+}
+#card6cb:checked ~ .carousel > div > #card6:hover > .hover .front:after {
+  left: -2rem;
+}
+@media (min-width: 1000px) {
+  #card6cb:checked ~ .carousel > div > #card6:hover ~ .prev-next-btns > * > * {
+    filter: blur(0.1rem);
+  }
+}
+#card6cb:checked ~ .carousel > div > #card6:hover .shadow {
+  left: 5rem;
+}
+.art #card6cb:checked ~ .carousel > div > #card6 {
+  transform: translate3d(0, 0, 25rem);
+  top: 29rem;
+}
+#card6cb:checked ~ .carousel > div > #card6 .card,
+#card6cb:checked ~ .carousel > div > #card6 .card2 {
+  animation: rotate 3s forwards;
+}
+#card6cb:checked ~ .carousel > div > #card6 .card h2,
+#card6cb:checked ~ .carousel > div > #card6 .card2 h2 {
+  display: block;
+}
+#card6cb:checked ~ .carousel > div > #card6 .card .photo > * {
+  animation: rotate2 3s forwards;
+}
+#card6cb:checked ~ .carousel > div > #card6 .front:after,
+#card6cb:checked ~ .carousel > div > #card6 .back:after {
+  animation: shine1 3s forwards;
+  opacity: 1;
+}
+#card6cb:checked ~ .carousel > div > #card6 .shadow {
+  display: none;
+}
+.home #card6cb:checked ~ .carousel > div > #card6 .shadow {
+  display: block;
+  transform: translate3d(-15rem, 0, -35rem) rotateX(90deg) skewX(30deg) scaleX(1.5);
+}
+.home #card6cb:checked ~ .carousel > div > #card6 .shadow:after, .home #card6cb:checked ~ .carousel > div > #card6 .shadow:before {
+  animation: shadowhover 3s 0.1s forwards linear;
+  opacity: 0;
+}
+#card6cb:checked ~ .carousel > div > #card6 .card2 {
+  margin-top: 2rem;
+}
+#card6cb:checked ~ .carousel > div > #card6 .card2 .front:after,
+#card6cb:checked ~ .carousel > div > #card6 .card2 .back:after {
+  opacity: 0.5;
+}
+#card6cb:checked ~ .carousel > div > #card6 .card3 {
+  top: 0;
+  bottom: 0;
+  aspect-ratio: 1.1/1;
+  height: 99vmin;
+  max-height: 99vh;
+  max-width: 99vw;
+  left: calc(-12rem - 100%);
+  right: calc(-12rem - 100%);
+  margin: auto;
+  position: absolute;
+}
+@media (orientation: portrait) {
+  #card6cb:checked ~ .carousel > div > #card6 .card3 {
+    height: 144vmin;
+  }
+}
+#card6cb:checked ~ .carousel > div > #card6 .card3 .front:after,
+#card6cb:checked ~ .carousel > div > #card6 .card3 .back:after {
+  opacity: 0.3;
+}
+@keyframes carousel-top {
+  70% {
+    transform: translate3d(0, -5rem, 25rem) scale(0.72);
+  }
+  100% {
+    transform: translate3d(0, 0, 25rem) scale(0.72);
+  }
+}
+#card6cb:checked ~ .carousel > * > .prev-next-btns > * > #next6btn,
+#card6cb:checked ~ .carousel > * > .prev-next-btns > * > #prev6btn {
+  display: block;
+}
+
+#c7:checked ~ #p7 {
+  display: block;
+}
+
+#card7cb:checked ~ .carousel > div > #card7 {
+  width: 24rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  margin: auto;
+  transform: translate3d(0, 60rem, 25rem) scale(0.72);
+  animation: carousel-top 0.5s forwards;
+  top: 2rem;
+}
+#card7cb:checked ~ .carousel > div > #card7 .hover,
+#card7cb:checked ~ .carousel > div > #card7 .hover .front:after {
+  transition: all 0.5s ease-in-out;
+}
+#card7cb:checked ~ .carousel > div > #card7:hover > .hover {
+  transform: translate3d(0, 0, 1rem);
+}
+#card7cb:checked ~ .carousel > div > #card7:hover > .hover .front:after {
+  left: -2rem;
+}
+@media (min-width: 1000px) {
+  #card7cb:checked ~ .carousel > div > #card7:hover ~ .prev-next-btns > * > * {
+    filter: blur(0.1rem);
+  }
+}
+#card7cb:checked ~ .carousel > div > #card7:hover .shadow {
+  left: 5rem;
+}
+.art #card7cb:checked ~ .carousel > div > #card7 {
+  transform: translate3d(0, 0, 25rem);
+  top: 29rem;
+}
+#card7cb:checked ~ .carousel > div > #card7 .card,
+#card7cb:checked ~ .carousel > div > #card7 .card2 {
+  animation: rotate 3s forwards;
+}
+#card7cb:checked ~ .carousel > div > #card7 .card h2,
+#card7cb:checked ~ .carousel > div > #card7 .card2 h2 {
+  display: block;
+}
+#card7cb:checked ~ .carousel > div > #card7 .card .photo > * {
+  animation: rotate2 3s forwards;
+}
+#card7cb:checked ~ .carousel > div > #card7 .front:after,
+#card7cb:checked ~ .carousel > div > #card7 .back:after {
+  animation: shine1 3s forwards;
+  opacity: 1;
+}
+#card7cb:checked ~ .carousel > div > #card7 .shadow {
+  display: none;
+}
+.home #card7cb:checked ~ .carousel > div > #card7 .shadow {
+  display: block;
+  transform: translate3d(-15rem, 0, -35rem) rotateX(90deg) skewX(30deg) scaleX(1.5);
+}
+.home #card7cb:checked ~ .carousel > div > #card7 .shadow:after, .home #card7cb:checked ~ .carousel > div > #card7 .shadow:before {
+  animation: shadowhover 3s 0.1s forwards linear;
+  opacity: 0;
+}
+#card7cb:checked ~ .carousel > div > #card7 .card2 {
+  margin-top: 2rem;
+}
+#card7cb:checked ~ .carousel > div > #card7 .card2 .front:after,
+#card7cb:checked ~ .carousel > div > #card7 .card2 .back:after {
+  opacity: 0.5;
+}
+#card7cb:checked ~ .carousel > div > #card7 .card3 {
+  top: 0;
+  bottom: 0;
+  aspect-ratio: 1.1/1;
+  height: 99vmin;
+  max-height: 99vh;
+  max-width: 99vw;
+  left: calc(-12rem - 100%);
+  right: calc(-12rem - 100%);
+  margin: auto;
+  position: absolute;
+}
+@media (orientation: portrait) {
+  #card7cb:checked ~ .carousel > div > #card7 .card3 {
+    height: 144vmin;
+  }
+}
+#card7cb:checked ~ .carousel > div > #card7 .card3 .front:after,
+#card7cb:checked ~ .carousel > div > #card7 .card3 .back:after {
+  opacity: 0.3;
+}
+@keyframes carousel-top {
+  70% {
+    transform: translate3d(0, -5rem, 25rem) scale(0.72);
+  }
+  100% {
+    transform: translate3d(0, 0, 25rem) scale(0.72);
+  }
+}
+#card7cb:checked ~ .carousel > * > .prev-next-btns > * > #next7btn,
+#card7cb:checked ~ .carousel > * > .prev-next-btns > * > #prev7btn {
+  display: block;
+}
+
+#c8:checked ~ #p8 {
+  display: block;
+}
+
+#card8cb:checked ~ .carousel > div > #card8 {
+  width: 24rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  margin: auto;
+  transform: translate3d(0, 60rem, 25rem) scale(0.72);
+  animation: carousel-top 0.5s forwards;
+  top: 2rem;
+}
+#card8cb:checked ~ .carousel > div > #card8 .hover,
+#card8cb:checked ~ .carousel > div > #card8 .hover .front:after {
+  transition: all 0.5s ease-in-out;
+}
+#card8cb:checked ~ .carousel > div > #card8:hover > .hover {
+  transform: translate3d(0, 0, 1rem);
+}
+#card8cb:checked ~ .carousel > div > #card8:hover > .hover .front:after {
+  left: -2rem;
+}
+@media (min-width: 1000px) {
+  #card8cb:checked ~ .carousel > div > #card8:hover ~ .prev-next-btns > * > * {
+    filter: blur(0.1rem);
+  }
+}
+#card8cb:checked ~ .carousel > div > #card8:hover .shadow {
+  left: 5rem;
+}
+.art #card8cb:checked ~ .carousel > div > #card8 {
+  transform: translate3d(0, 0, 25rem);
+  top: 29rem;
+}
+#card8cb:checked ~ .carousel > div > #card8 .card,
+#card8cb:checked ~ .carousel > div > #card8 .card2 {
+  animation: rotate 3s forwards;
+}
+#card8cb:checked ~ .carousel > div > #card8 .card h2,
+#card8cb:checked ~ .carousel > div > #card8 .card2 h2 {
+  display: block;
+}
+#card8cb:checked ~ .carousel > div > #card8 .card .photo > * {
+  animation: rotate2 3s forwards;
+}
+#card8cb:checked ~ .carousel > div > #card8 .front:after,
+#card8cb:checked ~ .carousel > div > #card8 .back:after {
+  animation: shine1 3s forwards;
+  opacity: 1;
+}
+#card8cb:checked ~ .carousel > div > #card8 .shadow {
+  display: none;
+}
+.home #card8cb:checked ~ .carousel > div > #card8 .shadow {
+  display: block;
+  transform: translate3d(-15rem, 0, -35rem) rotateX(90deg) skewX(30deg) scaleX(1.5);
+}
+.home #card8cb:checked ~ .carousel > div > #card8 .shadow:after, .home #card8cb:checked ~ .carousel > div > #card8 .shadow:before {
+  animation: shadowhover 3s 0.1s forwards linear;
+  opacity: 0;
+}
+#card8cb:checked ~ .carousel > div > #card8 .card2 {
+  margin-top: 2rem;
+}
+#card8cb:checked ~ .carousel > div > #card8 .card2 .front:after,
+#card8cb:checked ~ .carousel > div > #card8 .card2 .back:after {
+  opacity: 0.5;
+}
+#card8cb:checked ~ .carousel > div > #card8 .card3 {
+  top: 0;
+  bottom: 0;
+  aspect-ratio: 1.1/1;
+  height: 99vmin;
+  max-height: 99vh;
+  max-width: 99vw;
+  left: calc(-12rem - 100%);
+  right: calc(-12rem - 100%);
+  margin: auto;
+  position: absolute;
+}
+@media (orientation: portrait) {
+  #card8cb:checked ~ .carousel > div > #card8 .card3 {
+    height: 144vmin;
+  }
+}
+#card8cb:checked ~ .carousel > div > #card8 .card3 .front:after,
+#card8cb:checked ~ .carousel > div > #card8 .card3 .back:after {
+  opacity: 0.3;
+}
+@keyframes carousel-top {
+  70% {
+    transform: translate3d(0, -5rem, 25rem) scale(0.72);
+  }
+  100% {
+    transform: translate3d(0, 0, 25rem) scale(0.72);
+  }
+}
+#card8cb:checked ~ .carousel > * > .prev-next-btns > * > #next8btn,
+#card8cb:checked ~ .carousel > * > .prev-next-btns > * > #prev8btn {
+  display: block;
+}
+
+#c9:checked ~ #p9 {
+  display: block;
+}
+
+#card9cb:checked ~ .carousel > div > #card9 {
+  width: 24rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  margin: auto;
+  transform: translate3d(0, 60rem, 25rem) scale(0.72);
+  animation: carousel-top 0.5s forwards;
+  top: 2rem;
+}
+#card9cb:checked ~ .carousel > div > #card9 .hover,
+#card9cb:checked ~ .carousel > div > #card9 .hover .front:after {
+  transition: all 0.5s ease-in-out;
+}
+#card9cb:checked ~ .carousel > div > #card9:hover > .hover {
+  transform: translate3d(0, 0, 1rem);
+}
+#card9cb:checked ~ .carousel > div > #card9:hover > .hover .front:after {
+  left: -2rem;
+}
+@media (min-width: 1000px) {
+  #card9cb:checked ~ .carousel > div > #card9:hover ~ .prev-next-btns > * > * {
+    filter: blur(0.1rem);
+  }
+}
+#card9cb:checked ~ .carousel > div > #card9:hover .shadow {
+  left: 5rem;
+}
+.art #card9cb:checked ~ .carousel > div > #card9 {
+  transform: translate3d(0, 0, 25rem);
+  top: 29rem;
+}
+#card9cb:checked ~ .carousel > div > #card9 .card,
+#card9cb:checked ~ .carousel > div > #card9 .card2 {
+  animation: rotate 3s forwards;
+}
+#card9cb:checked ~ .carousel > div > #card9 .card h2,
+#card9cb:checked ~ .carousel > div > #card9 .card2 h2 {
+  display: block;
+}
+#card9cb:checked ~ .carousel > div > #card9 .card .photo > * {
+  animation: rotate2 3s forwards;
+}
+#card9cb:checked ~ .carousel > div > #card9 .front:after,
+#card9cb:checked ~ .carousel > div > #card9 .back:after {
+  animation: shine1 3s forwards;
+  opacity: 1;
+}
+#card9cb:checked ~ .carousel > div > #card9 .shadow {
+  display: none;
+}
+.home #card9cb:checked ~ .carousel > div > #card9 .shadow {
+  display: block;
+  transform: translate3d(-15rem, 0, -35rem) rotateX(90deg) skewX(30deg) scaleX(1.5);
+}
+.home #card9cb:checked ~ .carousel > div > #card9 .shadow:after, .home #card9cb:checked ~ .carousel > div > #card9 .shadow:before {
+  animation: shadowhover 3s 0.1s forwards linear;
+  opacity: 0;
+}
+#card9cb:checked ~ .carousel > div > #card9 .card2 {
+  margin-top: 2rem;
+}
+#card9cb:checked ~ .carousel > div > #card9 .card2 .front:after,
+#card9cb:checked ~ .carousel > div > #card9 .card2 .back:after {
+  opacity: 0.5;
+}
+#card9cb:checked ~ .carousel > div > #card9 .card3 {
+  top: 0;
+  bottom: 0;
+  aspect-ratio: 1.1/1;
+  height: 99vmin;
+  max-height: 99vh;
+  max-width: 99vw;
+  left: calc(-12rem - 100%);
+  right: calc(-12rem - 100%);
+  margin: auto;
+  position: absolute;
+}
+@media (orientation: portrait) {
+  #card9cb:checked ~ .carousel > div > #card9 .card3 {
+    height: 144vmin;
+  }
+}
+#card9cb:checked ~ .carousel > div > #card9 .card3 .front:after,
+#card9cb:checked ~ .carousel > div > #card9 .card3 .back:after {
+  opacity: 0.3;
+}
+@keyframes carousel-top {
+  70% {
+    transform: translate3d(0, -5rem, 25rem) scale(0.72);
+  }
+  100% {
+    transform: translate3d(0, 0, 25rem) scale(0.72);
+  }
+}
+#card9cb:checked ~ .carousel > * > .prev-next-btns > * > #next9btn,
+#card9cb:checked ~ .carousel > * > .prev-next-btns > * > #prev9btn {
+  display: block;
+}
+
+#c10:checked ~ #p10 {
+  display: block;
+}
+
+#card10cb:checked ~ .carousel > div > #card10 {
+  width: 24rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  margin: auto;
+  transform: translate3d(0, 60rem, 25rem) scale(0.72);
+  animation: carousel-top 0.5s forwards;
+  top: 2rem;
+}
+#card10cb:checked ~ .carousel > div > #card10 .hover,
+#card10cb:checked ~ .carousel > div > #card10 .hover .front:after {
+  transition: all 0.5s ease-in-out;
+}
+#card10cb:checked ~ .carousel > div > #card10:hover > .hover {
+  transform: translate3d(0, 0, 1rem);
+}
+#card10cb:checked ~ .carousel > div > #card10:hover > .hover .front:after {
+  left: -2rem;
+}
+@media (min-width: 1000px) {
+  #card10cb:checked ~ .carousel > div > #card10:hover ~ .prev-next-btns > * > * {
+    filter: blur(0.1rem);
+  }
+}
+#card10cb:checked ~ .carousel > div > #card10:hover .shadow {
+  left: 5rem;
+}
+.art #card10cb:checked ~ .carousel > div > #card10 {
+  transform: translate3d(0, 0, 25rem);
+  top: 29rem;
+}
+#card10cb:checked ~ .carousel > div > #card10 .card,
+#card10cb:checked ~ .carousel > div > #card10 .card2 {
+  animation: rotate 3s forwards;
+}
+#card10cb:checked ~ .carousel > div > #card10 .card h2,
+#card10cb:checked ~ .carousel > div > #card10 .card2 h2 {
+  display: block;
+}
+#card10cb:checked ~ .carousel > div > #card10 .card .photo > * {
+  animation: rotate2 3s forwards;
+}
+#card10cb:checked ~ .carousel > div > #card10 .front:after,
+#card10cb:checked ~ .carousel > div > #card10 .back:after {
+  animation: shine1 3s forwards;
+  opacity: 1;
+}
+#card10cb:checked ~ .carousel > div > #card10 .shadow {
+  display: none;
+}
+.home #card10cb:checked ~ .carousel > div > #card10 .shadow {
+  display: block;
+  transform: translate3d(-15rem, 0, -35rem) rotateX(90deg) skewX(30deg) scaleX(1.5);
+}
+.home #card10cb:checked ~ .carousel > div > #card10 .shadow:after, .home #card10cb:checked ~ .carousel > div > #card10 .shadow:before {
+  animation: shadowhover 3s 0.1s forwards linear;
+  opacity: 0;
+}
+#card10cb:checked ~ .carousel > div > #card10 .card2 {
+  margin-top: 2rem;
+}
+#card10cb:checked ~ .carousel > div > #card10 .card2 .front:after,
+#card10cb:checked ~ .carousel > div > #card10 .card2 .back:after {
+  opacity: 0.5;
+}
+#card10cb:checked ~ .carousel > div > #card10 .card3 {
+  top: 0;
+  bottom: 0;
+  aspect-ratio: 1.1/1;
+  height: 99vmin;
+  max-height: 99vh;
+  max-width: 99vw;
+  left: calc(-12rem - 100%);
+  right: calc(-12rem - 100%);
+  margin: auto;
+  position: absolute;
+}
+@media (orientation: portrait) {
+  #card10cb:checked ~ .carousel > div > #card10 .card3 {
+    height: 144vmin;
+  }
+}
+#card10cb:checked ~ .carousel > div > #card10 .card3 .front:after,
+#card10cb:checked ~ .carousel > div > #card10 .card3 .back:after {
+  opacity: 0.3;
+}
+@keyframes carousel-top {
+  70% {
+    transform: translate3d(0, -5rem, 25rem) scale(0.72);
+  }
+  100% {
+    transform: translate3d(0, 0, 25rem) scale(0.72);
+  }
+}
+#card10cb:checked ~ .carousel > * > .prev-next-btns > * > #next10btn,
+#card10cb:checked ~ .carousel > * > .prev-next-btns > * > #prev10btn {
+  display: block;
+}
+
+#c11:checked ~ #p11 {
+  display: block;
+}
+
+#card11cb:checked ~ .carousel > div > #card11 {
+  width: 24rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  margin: auto;
+  transform: translate3d(0, 60rem, 25rem) scale(0.72);
+  animation: carousel-top 0.5s forwards;
+  top: 2rem;
+}
+#card11cb:checked ~ .carousel > div > #card11 .hover,
+#card11cb:checked ~ .carousel > div > #card11 .hover .front:after {
+  transition: all 0.5s ease-in-out;
+}
+#card11cb:checked ~ .carousel > div > #card11:hover > .hover {
+  transform: translate3d(0, 0, 1rem);
+}
+#card11cb:checked ~ .carousel > div > #card11:hover > .hover .front:after {
+  left: -2rem;
+}
+@media (min-width: 1000px) {
+  #card11cb:checked ~ .carousel > div > #card11:hover ~ .prev-next-btns > * > * {
+    filter: blur(0.1rem);
+  }
+}
+#card11cb:checked ~ .carousel > div > #card11:hover .shadow {
+  left: 5rem;
+}
+.art #card11cb:checked ~ .carousel > div > #card11 {
+  transform: translate3d(0, 0, 25rem);
+  top: 29rem;
+}
+#card11cb:checked ~ .carousel > div > #card11 .card,
+#card11cb:checked ~ .carousel > div > #card11 .card2 {
+  animation: rotate 3s forwards;
+}
+#card11cb:checked ~ .carousel > div > #card11 .card h2,
+#card11cb:checked ~ .carousel > div > #card11 .card2 h2 {
+  display: block;
+}
+#card11cb:checked ~ .carousel > div > #card11 .card .photo > * {
+  animation: rotate2 3s forwards;
+}
+#card11cb:checked ~ .carousel > div > #card11 .front:after,
+#card11cb:checked ~ .carousel > div > #card11 .back:after {
+  animation: shine1 3s forwards;
+  opacity: 1;
+}
+#card11cb:checked ~ .carousel > div > #card11 .shadow {
+  display: none;
+}
+.home #card11cb:checked ~ .carousel > div > #card11 .shadow {
+  display: block;
+  transform: translate3d(-15rem, 0, -35rem) rotateX(90deg) skewX(30deg) scaleX(1.5);
+}
+.home #card11cb:checked ~ .carousel > div > #card11 .shadow:after, .home #card11cb:checked ~ .carousel > div > #card11 .shadow:before {
+  animation: shadowhover 3s 0.1s forwards linear;
+  opacity: 0;
+}
+#card11cb:checked ~ .carousel > div > #card11 .card2 {
+  margin-top: 2rem;
+}
+#card11cb:checked ~ .carousel > div > #card11 .card2 .front:after,
+#card11cb:checked ~ .carousel > div > #card11 .card2 .back:after {
+  opacity: 0.5;
+}
+#card11cb:checked ~ .carousel > div > #card11 .card3 {
+  top: 0;
+  bottom: 0;
+  aspect-ratio: 1.1/1;
+  height: 99vmin;
+  max-height: 99vh;
+  max-width: 99vw;
+  left: calc(-12rem - 100%);
+  right: calc(-12rem - 100%);
+  margin: auto;
+  position: absolute;
+}
+@media (orientation: portrait) {
+  #card11cb:checked ~ .carousel > div > #card11 .card3 {
+    height: 144vmin;
+  }
+}
+#card11cb:checked ~ .carousel > div > #card11 .card3 .front:after,
+#card11cb:checked ~ .carousel > div > #card11 .card3 .back:after {
+  opacity: 0.3;
+}
+@keyframes carousel-top {
+  70% {
+    transform: translate3d(0, -5rem, 25rem) scale(0.72);
+  }
+  100% {
+    transform: translate3d(0, 0, 25rem) scale(0.72);
+  }
+}
+#card11cb:checked ~ .carousel > * > .prev-next-btns > * > #next11btn,
+#card11cb:checked ~ .carousel > * > .prev-next-btns > * > #prev11btn {
+  display: block;
+}
+
+#c12:checked ~ #p12 {
+  display: block;
+}
+
+#card12cb:checked ~ .carousel > div > #card12 {
+  width: 24rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  margin: auto;
+  transform: translate3d(0, 60rem, 25rem) scale(0.72);
+  animation: carousel-top 0.5s forwards;
+  top: 2rem;
+}
+#card12cb:checked ~ .carousel > div > #card12 .hover,
+#card12cb:checked ~ .carousel > div > #card12 .hover .front:after {
+  transition: all 0.5s ease-in-out;
+}
+#card12cb:checked ~ .carousel > div > #card12:hover > .hover {
+  transform: translate3d(0, 0, 1rem);
+}
+#card12cb:checked ~ .carousel > div > #card12:hover > .hover .front:after {
+  left: -2rem;
+}
+@media (min-width: 1000px) {
+  #card12cb:checked ~ .carousel > div > #card12:hover ~ .prev-next-btns > * > * {
+    filter: blur(0.1rem);
+  }
+}
+#card12cb:checked ~ .carousel > div > #card12:hover .shadow {
+  left: 5rem;
+}
+.art #card12cb:checked ~ .carousel > div > #card12 {
+  transform: translate3d(0, 0, 25rem);
+  top: 29rem;
+}
+#card12cb:checked ~ .carousel > div > #card12 .card,
+#card12cb:checked ~ .carousel > div > #card12 .card2 {
+  animation: rotate 3s forwards;
+}
+#card12cb:checked ~ .carousel > div > #card12 .card h2,
+#card12cb:checked ~ .carousel > div > #card12 .card2 h2 {
+  display: block;
+}
+#card12cb:checked ~ .carousel > div > #card12 .card .photo > * {
+  animation: rotate2 3s forwards;
+}
+#card12cb:checked ~ .carousel > div > #card12 .front:after,
+#card12cb:checked ~ .carousel > div > #card12 .back:after {
+  animation: shine1 3s forwards;
+  opacity: 1;
+}
+#card12cb:checked ~ .carousel > div > #card12 .shadow {
+  display: none;
+}
+.home #card12cb:checked ~ .carousel > div > #card12 .shadow {
+  display: block;
+  transform: translate3d(-15rem, 0, -35rem) rotateX(90deg) skewX(30deg) scaleX(1.5);
+}
+.home #card12cb:checked ~ .carousel > div > #card12 .shadow:after, .home #card12cb:checked ~ .carousel > div > #card12 .shadow:before {
+  animation: shadowhover 3s 0.1s forwards linear;
+  opacity: 0;
+}
+#card12cb:checked ~ .carousel > div > #card12 .card2 {
+  margin-top: 2rem;
+}
+#card12cb:checked ~ .carousel > div > #card12 .card2 .front:after,
+#card12cb:checked ~ .carousel > div > #card12 .card2 .back:after {
+  opacity: 0.5;
+}
+#card12cb:checked ~ .carousel > div > #card12 .card3 {
+  top: 0;
+  bottom: 0;
+  aspect-ratio: 1.1/1;
+  height: 99vmin;
+  max-height: 99vh;
+  max-width: 99vw;
+  left: calc(-12rem - 100%);
+  right: calc(-12rem - 100%);
+  margin: auto;
+  position: absolute;
+}
+@media (orientation: portrait) {
+  #card12cb:checked ~ .carousel > div > #card12 .card3 {
+    height: 144vmin;
+  }
+}
+#card12cb:checked ~ .carousel > div > #card12 .card3 .front:after,
+#card12cb:checked ~ .carousel > div > #card12 .card3 .back:after {
+  opacity: 0.3;
+}
+@keyframes carousel-top {
+  70% {
+    transform: translate3d(0, -5rem, 25rem) scale(0.72);
+  }
+  100% {
+    transform: translate3d(0, 0, 25rem) scale(0.72);
+  }
+}
+#card12cb:checked ~ .carousel > * > .prev-next-btns > * > #next12btn,
+#card12cb:checked ~ .carousel > * > .prev-next-btns > * > #prev12btn {
+  display: block;
+}
+
+.btn-next,
+.btn-prev {
+  font-size: 0;
+  width: 4rem;
+  height: 2rem;
+  border-radius: 1rem 0 0 1rem;
+  border: 0.2rem solid rgba(241, 43, 43, 0);
+  background: #5c5d60;
+  display: none;
+  position: relative;
+  margin: auto;
+  transform: translate3d(0, 0, 55rem);
+  transition: all 0.25s ease-in-out;
+}
+.btn-next:after,
+.btn-prev:after {
+  content: ">";
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  font-family: "Xanh Mono", monospace;
+  font-size: 1rem;
+  line-height: 1;
+}
+.btn-next:hover, .btn-next:focus,
+.btn-prev:hover,
+.btn-prev:focus {
+  box-shadow: 0 0 0 1px rgba(192, 233, 9, 0.5), inset 0 0 0 2rem rgba(192, 233, 9, 0.5);
+  color: #434446;
+}
+
+.btn-prev {
+  border-radius: 0 1rem 1rem 0;
+}
+.btn-prev:after {
+  content: "<";
+  right: 0;
+  left: auto;
+}
+
+.the-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 90vh 10vw 6rem;
+  margin: auto;
+  margin-top: -90vh;
+}
+.the-cards .carousel-card-holder {
+  width: 24rem;
+  text-decoration: none;
+  transform: translate3d(0, 0, 16.6666666667rem) scale(0.75) rotateY(2deg) rotateX(2deg);
+  transform: translate3d(0, 0, 16.6666666667rem) scale(0.75);
+  margin: -2rem 0;
+  transition: all 0.5s ease-in-out;
+}
+.art .the-cards {
+  padding: 100vh 10vw 8rem;
+  margin-top: -98vh;
+}
+.art .the-cards .carousel-card-holder {
+  width: 30rem;
+}
+
+.card,
+.card2,
+.photo > *,
+.angle,
+.front:after,
+.back:after,
+.shadow {
+  animation: nothing 0.25s forwards;
+}
+
+#card1cb:not(:checked) ~ .carousel > div > #card1:hover .card2,
+#card1cb:not(:checked) ~ .carousel > div > #card1:hover .card {
+  animation: hover-card 0.5s forwards;
+  filter: saturate(1.5);
+}
+#card1cb:not(:checked) ~ .carousel > div > #card1:hover .card2 .front:after,
+#card1cb:not(:checked) ~ .carousel > div > #card1:hover .card2 .back:after,
+#card1cb:not(:checked) ~ .carousel > div > #card1:hover .card .front:after,
+#card1cb:not(:checked) ~ .carousel > div > #card1:hover .card .back:after {
+  animation: hover-shine 0.5s forwards;
+}
+#card1cb:not(:checked) ~ .carousel > div > #card1:hover .shadow:after {
+  animation: hover-shadow2 0.5s forwards;
+}
+
+#card2cb:not(:checked) ~ .carousel > div > #card2:hover .card2,
+#card2cb:not(:checked) ~ .carousel > div > #card2:hover .card {
+  animation: hover-card 0.5s forwards;
+  filter: saturate(1.5);
+}
+#card2cb:not(:checked) ~ .carousel > div > #card2:hover .card2 .front:after,
+#card2cb:not(:checked) ~ .carousel > div > #card2:hover .card2 .back:after,
+#card2cb:not(:checked) ~ .carousel > div > #card2:hover .card .front:after,
+#card2cb:not(:checked) ~ .carousel > div > #card2:hover .card .back:after {
+  animation: hover-shine 0.5s forwards;
+}
+#card2cb:not(:checked) ~ .carousel > div > #card2:hover .shadow:after {
+  animation: hover-shadow2 0.5s forwards;
+}
+
+#card3cb:not(:checked) ~ .carousel > div > #card3:hover .card2,
+#card3cb:not(:checked) ~ .carousel > div > #card3:hover .card {
+  animation: hover-card 0.5s forwards;
+  filter: saturate(1.5);
+}
+#card3cb:not(:checked) ~ .carousel > div > #card3:hover .card2 .front:after,
+#card3cb:not(:checked) ~ .carousel > div > #card3:hover .card2 .back:after,
+#card3cb:not(:checked) ~ .carousel > div > #card3:hover .card .front:after,
+#card3cb:not(:checked) ~ .carousel > div > #card3:hover .card .back:after {
+  animation: hover-shine 0.5s forwards;
+}
+#card3cb:not(:checked) ~ .carousel > div > #card3:hover .shadow:after {
+  animation: hover-shadow2 0.5s forwards;
+}
+
+#card4cb:not(:checked) ~ .carousel > div > #card4:hover .card2,
+#card4cb:not(:checked) ~ .carousel > div > #card4:hover .card {
+  animation: hover-card 0.5s forwards;
+  filter: saturate(1.5);
+}
+#card4cb:not(:checked) ~ .carousel > div > #card4:hover .card2 .front:after,
+#card4cb:not(:checked) ~ .carousel > div > #card4:hover .card2 .back:after,
+#card4cb:not(:checked) ~ .carousel > div > #card4:hover .card .front:after,
+#card4cb:not(:checked) ~ .carousel > div > #card4:hover .card .back:after {
+  animation: hover-shine 0.5s forwards;
+}
+#card4cb:not(:checked) ~ .carousel > div > #card4:hover .shadow:after {
+  animation: hover-shadow2 0.5s forwards;
+}
+
+#card5cb:not(:checked) ~ .carousel > div > #card5:hover .card2,
+#card5cb:not(:checked) ~ .carousel > div > #card5:hover .card {
+  animation: hover-card 0.5s forwards;
+  filter: saturate(1.5);
+}
+#card5cb:not(:checked) ~ .carousel > div > #card5:hover .card2 .front:after,
+#card5cb:not(:checked) ~ .carousel > div > #card5:hover .card2 .back:after,
+#card5cb:not(:checked) ~ .carousel > div > #card5:hover .card .front:after,
+#card5cb:not(:checked) ~ .carousel > div > #card5:hover .card .back:after {
+  animation: hover-shine 0.5s forwards;
+}
+#card5cb:not(:checked) ~ .carousel > div > #card5:hover .shadow:after {
+  animation: hover-shadow2 0.5s forwards;
+}
+
+#card6cb:not(:checked) ~ .carousel > div > #card6:hover .card2,
+#card6cb:not(:checked) ~ .carousel > div > #card6:hover .card {
+  animation: hover-card 0.5s forwards;
+  filter: saturate(1.5);
+}
+#card6cb:not(:checked) ~ .carousel > div > #card6:hover .card2 .front:after,
+#card6cb:not(:checked) ~ .carousel > div > #card6:hover .card2 .back:after,
+#card6cb:not(:checked) ~ .carousel > div > #card6:hover .card .front:after,
+#card6cb:not(:checked) ~ .carousel > div > #card6:hover .card .back:after {
+  animation: hover-shine 0.5s forwards;
+}
+#card6cb:not(:checked) ~ .carousel > div > #card6:hover .shadow:after {
+  animation: hover-shadow2 0.5s forwards;
+}
+
+#card7cb:not(:checked) ~ .carousel > div > #card7:hover .card2,
+#card7cb:not(:checked) ~ .carousel > div > #card7:hover .card {
+  animation: hover-card 0.5s forwards;
+  filter: saturate(1.5);
+}
+#card7cb:not(:checked) ~ .carousel > div > #card7:hover .card2 .front:after,
+#card7cb:not(:checked) ~ .carousel > div > #card7:hover .card2 .back:after,
+#card7cb:not(:checked) ~ .carousel > div > #card7:hover .card .front:after,
+#card7cb:not(:checked) ~ .carousel > div > #card7:hover .card .back:after {
+  animation: hover-shine 0.5s forwards;
+}
+#card7cb:not(:checked) ~ .carousel > div > #card7:hover .shadow:after {
+  animation: hover-shadow2 0.5s forwards;
+}
+
+#card8cb:not(:checked) ~ .carousel > div > #card8:hover .card2,
+#card8cb:not(:checked) ~ .carousel > div > #card8:hover .card {
+  animation: hover-card 0.5s forwards;
+  filter: saturate(1.5);
+}
+#card8cb:not(:checked) ~ .carousel > div > #card8:hover .card2 .front:after,
+#card8cb:not(:checked) ~ .carousel > div > #card8:hover .card2 .back:after,
+#card8cb:not(:checked) ~ .carousel > div > #card8:hover .card .front:after,
+#card8cb:not(:checked) ~ .carousel > div > #card8:hover .card .back:after {
+  animation: hover-shine 0.5s forwards;
+}
+#card8cb:not(:checked) ~ .carousel > div > #card8:hover .shadow:after {
+  animation: hover-shadow2 0.5s forwards;
+}
+
+#card9cb:not(:checked) ~ .carousel > div > #card9:hover .card2,
+#card9cb:not(:checked) ~ .carousel > div > #card9:hover .card {
+  animation: hover-card 0.5s forwards;
+  filter: saturate(1.5);
+}
+#card9cb:not(:checked) ~ .carousel > div > #card9:hover .card2 .front:after,
+#card9cb:not(:checked) ~ .carousel > div > #card9:hover .card2 .back:after,
+#card9cb:not(:checked) ~ .carousel > div > #card9:hover .card .front:after,
+#card9cb:not(:checked) ~ .carousel > div > #card9:hover .card .back:after {
+  animation: hover-shine 0.5s forwards;
+}
+#card9cb:not(:checked) ~ .carousel > div > #card9:hover .shadow:after {
+  animation: hover-shadow2 0.5s forwards;
+}
+
+#card10cb:not(:checked) ~ .carousel > div > #card10:hover .card2,
+#card10cb:not(:checked) ~ .carousel > div > #card10:hover .card {
+  animation: hover-card 0.5s forwards;
+  filter: saturate(1.5);
+}
+#card10cb:not(:checked) ~ .carousel > div > #card10:hover .card2 .front:after,
+#card10cb:not(:checked) ~ .carousel > div > #card10:hover .card2 .back:after,
+#card10cb:not(:checked) ~ .carousel > div > #card10:hover .card .front:after,
+#card10cb:not(:checked) ~ .carousel > div > #card10:hover .card .back:after {
+  animation: hover-shine 0.5s forwards;
+}
+#card10cb:not(:checked) ~ .carousel > div > #card10:hover .shadow:after {
+  animation: hover-shadow2 0.5s forwards;
+}
+
+#card11cb:not(:checked) ~ .carousel > div > #card11:hover .card2,
+#card11cb:not(:checked) ~ .carousel > div > #card11:hover .card {
+  animation: hover-card 0.5s forwards;
+  filter: saturate(1.5);
+}
+#card11cb:not(:checked) ~ .carousel > div > #card11:hover .card2 .front:after,
+#card11cb:not(:checked) ~ .carousel > div > #card11:hover .card2 .back:after,
+#card11cb:not(:checked) ~ .carousel > div > #card11:hover .card .front:after,
+#card11cb:not(:checked) ~ .carousel > div > #card11:hover .card .back:after {
+  animation: hover-shine 0.5s forwards;
+}
+#card11cb:not(:checked) ~ .carousel > div > #card11:hover .shadow:after {
+  animation: hover-shadow2 0.5s forwards;
+}
+
+#card12cb:not(:checked) ~ .carousel > div > #card12:hover .card2,
+#card12cb:not(:checked) ~ .carousel > div > #card12:hover .card {
+  animation: hover-card 0.5s forwards;
+  filter: saturate(1.5);
+}
+#card12cb:not(:checked) ~ .carousel > div > #card12:hover .card2 .front:after,
+#card12cb:not(:checked) ~ .carousel > div > #card12:hover .card2 .back:after,
+#card12cb:not(:checked) ~ .carousel > div > #card12:hover .card .front:after,
+#card12cb:not(:checked) ~ .carousel > div > #card12:hover .card .back:after {
+  animation: hover-shine 0.5s forwards;
+}
+#card12cb:not(:checked) ~ .carousel > div > #card12:hover .shadow:after {
+  animation: hover-shadow2 0.5s forwards;
+}
+
+@keyframes hover-card {
+  33% {
+    transform: translate3d(0, 0, -1rem) rotateY(-10deg) rotateX(5deg);
+  }
+  66% {
+    transform: translate3d(0, 0, -1rem) rotateY(10deg) rotateX(-5deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 5rem) rotateY(0deg) rotateX(0deg);
+  }
+}
+@keyframes hover-shine {
+  33% {
+    transform: translate3d(-27rem, 0, 0);
+  }
+  66% {
+    transform: translate3d(-47rem, 0, 0);
+  }
+}
+@keyframes hover-shadow2 {
+  33% {
+    transform: translate3d(0, 0, -10rem) rotateY(-10deg) rotateX(5deg);
+  }
+  66% {
+    transform: translate3d(0, 0, -10rem) rotateY(10deg) rotateX(-5deg);
+  }
+  100% {
+    transform: translate3d(-1rem, 0, -15rem) rotateY(0deg) rotateX(0deg) scale(1.1);
+  }
+}
+@media (orientation: landscape) {
+  #card1cb:checked ~ .carousel > div > #card1 > .blobby-bits {
+    display: block;
+    animation: blobby-in 5s ease-out forwards;
+  }
+  #card2cb:checked ~ .carousel > div > #card2 > .blobby-bits {
+    display: block;
+    animation: blobby-in 5s ease-out forwards;
+  }
+  #card3cb:checked ~ .carousel > div > #card3 > .blobby-bits {
+    display: block;
+    animation: blobby-in 5s ease-out forwards;
+  }
+  #card4cb:checked ~ .carousel > div > #card4 > .blobby-bits {
+    display: block;
+    animation: blobby-in 5s ease-out forwards;
+  }
+  #card5cb:checked ~ .carousel > div > #card5 > .blobby-bits {
+    display: block;
+    animation: blobby-in 5s ease-out forwards;
+  }
+  #card6cb:checked ~ .carousel > div > #card6 > .blobby-bits {
+    display: block;
+    animation: blobby-in 5s ease-out forwards;
+  }
+  #card7cb:checked ~ .carousel > div > #card7 > .blobby-bits {
+    display: block;
+    animation: blobby-in 5s ease-out forwards;
+  }
+  .top-bit:after {
+    content: "";
+    position: absolute;
+    top: -20rem;
+    left: 90vw;
+    display: block;
+    width: 0.1rem;
+    height: 10rem;
+    transform: translate3d(0, 0, -30rem) rotate(45deg);
+    box-shadow: 21rem 122rem 0   #acd008 , 120rem 144rem 0 0.04rem   #605c60 , 49rem 165rem 0 0.04rem   rgb(136, 130, 136) , 88rem 61rem 0 0.02rem   rgb(136, 130, 136) , 24rem 70rem 0 0.04rem   rgb(136, 130, 136) , 11rem 44rem 0 0.04rem   rgb(136, 130, 136) , 51rem 29rem 0 0.04rem   #605c60 , -25rem 14rem 0 0.02rem   #605c60 , 118rem 63rem 0 0.02rem   #605c60 , 9rem 139rem 0 0.02rem   rgb(136, 130, 136) , 45rem 160rem 0 0.04rem   #605c60 , 20rem 51rem 0 0.04rem   #605c60 , 79rem 27rem 0 0.04rem   rgb(136, 130, 136) , 66rem 85rem 0 0.02rem   #605c60 , 113rem 56rem 0 0.02rem   rgb(136, 130, 136) , -1rem 178rem 0 0.02rem   #605c60 , 28rem 11rem 0 0.02rem   #605c60 , 25rem 122rem 0 0.02rem   #605c60 , -45rem 169rem 0 0.04rem   #605c60 , 23rem 154rem 0 0.02rem   #605c60 , 117rem 67rem 0 0.04rem   #605c60 , 111rem 103rem 0 0.04rem   #605c60 , 115rem 190rem 0 0.04rem   rgb(136, 130, 136) , -22rem 18rem 0 0.04rem   #605c60 , 64rem 197rem 0 0.04rem   rgb(136, 130, 136) , -42rem 48rem 0 0.02rem   rgb(136, 130, 136) , 52rem 139rem 0 0.04rem   rgb(136, 130, 136) , 99rem 76rem 0 0.04rem   rgb(136, 130, 136) , 31rem 94rem 0 0.04rem   #605c60 , 83rem 68rem 0 0.02rem   rgb(136, 130, 136) , -14rem 36rem 0 0.02rem   rgb(136, 130, 136) , -3rem 163rem 0 0.02rem   rgb(136, 130, 136) , 46rem 174rem 0 0.02rem   rgb(136, 130, 136) , 58rem 107rem 0 0.04rem   rgb(136, 130, 136) , 43rem 130rem 0 0.04rem   rgb(136, 130, 136) , 92rem 108rem 0 0.04rem   rgb(136, 130, 136) , -31rem 63rem 0 0.04rem   #605c60 , 92rem 200rem 0 0.04rem   #605c60 , 132rem 61rem 0 0.04rem   #605c60 , -16rem 21rem 0 0.04rem   rgb(136, 130, 136) , -24rem 191rem 0 0.02rem   rgb(136, 130, 136) , 20rem 111rem 0 0.02rem   rgb(136, 130, 136) , 93rem 48rem 0 0.02rem   rgb(136, 130, 136) , 102rem 83rem 0 0.04rem   rgb(136, 130, 136) , -24rem 103rem 0 0.04rem   rgb(136, 130, 136) , 115rem 126rem 0 0.04rem   rgb(136, 130, 136) , 147rem 104rem 0 0.04rem   #605c60 , 58rem 3rem 0 0.02rem   #605c60 , -18rem 98rem 0 0.02rem   #605c60 , 95rem 20rem 0 0.04rem   rgb(136, 130, 136) , 14rem 172rem 0 0.04rem   rgb(136, 130, 136) , 16rem 36rem 0 0.02rem   rgb(136, 130, 136) , 53rem 72rem 0 0.02rem   #605c60 , 9rem 171rem 0 0.04rem   rgb(136, 130, 136) , 3rem 191rem 0 0.04rem   rgb(136, 130, 136) , 16rem 137rem 0 0.02rem   rgb(136, 130, 136) , 15rem 3rem 0 0.04rem   rgb(136, 130, 136) , 46rem 156rem 0 0.02rem   rgb(136, 130, 136) , 148rem 32rem 0 0.04rem   rgb(136, 130, 136) , -43rem 10rem 0 0.04rem   rgb(136, 130, 136) , -27rem 187rem 0 0.04rem   rgb(136, 130, 136) , 12rem 174rem 0 0.02rem   #605c60 , 57rem 136rem 0 0.04rem   rgb(136, 130, 136) , 34rem 34rem 0 0.02rem   rgb(136, 130, 136) , 12rem 186rem 0 0.02rem   rgb(136, 130, 136) , 88rem 194rem 0 0.02rem   #605c60 , 93rem 54rem 0 0.04rem   rgb(136, 130, 136) , 74rem 149rem 0 0.02rem   #605c60 , 39rem 180rem 0 0.04rem   #605c60 , 15rem 98rem 0 0.04rem   #605c60 , 4rem 1rem 0 0.02rem   #605c60 , 108rem 200rem 0 0.04rem   rgb(136, 130, 136) , 31rem 140rem 0 0.02rem   rgb(136, 130, 136) , 34rem 65rem 0 0.02rem   rgb(136, 130, 136) , -15rem 164rem 0 0.02rem   rgb(136, 130, 136) , 107rem 156rem 0 0.04rem   rgb(136, 130, 136) , -22rem 107rem 0 0.02rem   rgb(136, 130, 136) , -9rem 49rem 0 0.02rem   rgb(136, 130, 136) , -42rem 102rem 0 0.02rem   #605c60 , 47rem 31rem 0 0.02rem   #605c60 , 66rem 102rem 0 0.02rem   #605c60 , -10rem 58rem 0 0.02rem   #605c60 , 37rem 56rem 0 0.04rem   rgb(136, 130, 136) , -20rem 9rem 0 0.04rem   rgb(136, 130, 136) , 50rem 10rem 0 0.02rem   #605c60 , 75rem 102rem 0 0.04rem   rgb(136, 130, 136) , 24rem 14rem 0 0.02rem   rgb(136, 130, 136) , -32rem 17rem 0 0.02rem   rgb(136, 130, 136) , 88rem 61rem 0 0.04rem   #605c60 , 59rem 60rem 0 0.02rem   rgb(136, 130, 136) , 135rem 70rem 0 0.04rem   #605c60 , 12rem 16rem 0 0.02rem   #605c60 , 73rem 13rem 0 0.04rem   rgb(136, 130, 136) , 77rem 77rem 0 0.04rem   rgb(136, 130, 136) , -20rem 3rem 0 0.04rem   #605c60 , 116rem 54rem 0 0.02rem   #605c60 , -44rem 42rem 0 0.04rem   #605c60 , 20rem 35rem 0 0.04rem   rgb(136, 130, 136) , 119rem 153rem 0 0.02rem   rgb(136, 130, 136) , -37rem 121rem 0 0.04rem   #605c60 , 19rem 123rem 0 0.04rem   rgb(136, 130, 136) , -9rem 111rem 0 0.04rem   rgb(136, 130, 136) , 88rem 35rem 0 0.04rem   rgb(136, 130, 136) , -32rem 125rem 0 0.04rem   rgb(136, 130, 136) , 91rem 166rem 0 0.02rem   rgb(136, 130, 136) , 84rem 130rem 0 0.02rem   #605c60 , 96rem 45rem 0 0.02rem   #605c60 , -46rem 56rem 0 0.02rem   rgb(136, 130, 136) , 60rem 37rem 0 0.02rem   rgb(136, 130, 136) , 105rem 91rem 0 0.02rem   rgb(136, 130, 136) , 3rem 139rem 0 0.04rem   rgb(136, 130, 136) , 96rem 162rem 0 0.02rem   #605c60 , 41rem 83rem 0 0.02rem   rgb(136, 130, 136) , 107rem 73rem 0 0.02rem   rgb(136, 130, 136) , 147rem 72rem 0 0.04rem   rgb(136, 130, 136) , 85rem 84rem 0 0.04rem   rgb(136, 130, 136) , 111rem 143rem 0 0.04rem   #605c60 , 22rem 41rem 0 0.02rem   #605c60 , -30rem 180rem 0 0.02rem   rgb(136, 130, 136) , 119rem 72rem 0 0.02rem   #605c60 , -45rem 44rem 0 0.02rem   rgb(136, 130, 136) , 60rem 5rem 0 0.04rem   rgb(136, 130, 136) , 111rem 123rem 0 0.04rem   #605c60 , 52rem 107rem 0 0.02rem   #605c60 , 90rem 70rem 0 0.04rem   #605c60 , 75rem 151rem 0 0.04rem   #605c60 , 54rem 87rem 0 0.04rem   #605c60 , 46rem 75rem 0 0.02rem   #605c60 , 98rem 6rem 0 0.02rem   #605c60 , 48rem 65rem 0 0.02rem   rgb(136, 130, 136) , 44rem 83rem 0 0.04rem   rgb(136, 130, 136) , 81rem 131rem 0 0.02rem   #605c60 , 129rem 15rem 0 0.02rem   #605c60 , 113rem 154rem 0 0.02rem   #605c60 , 114rem 11rem 0 0.04rem   rgb(136, 130, 136) , 52rem 149rem 0 0.02rem   rgb(136, 130, 136) , 144rem 181rem 0 0.02rem   rgb(136, 130, 136) , -4rem 47rem 0 0.04rem   rgb(136, 130, 136) , 102rem 135rem 0 0.02rem   rgb(136, 130, 136) , -44rem 101rem 0 0.02rem   #605c60 , 53rem 23rem 0 0.04rem   #605c60 , 69rem 114rem 0 0.02rem   rgb(136, 130, 136) , -25rem 36rem 0 0.02rem   rgb(136, 130, 136) , -9rem 72rem 0 0.04rem   rgb(136, 130, 136) , 71rem 18rem 0 0.04rem   #605c60 , 49rem 39rem 0 0.04rem   #605c60 , 15rem 97rem 0 0.02rem   #605c60 , 106rem 29rem 0 0.04rem   #605c60 , -32rem 120rem 0 0.02rem   rgb(136, 130, 136) , 123rem 28rem 0 0.02rem   rgb(136, 130, 136) , 122rem 142rem 0 0.04rem   #605c60 , 123rem 139rem 0 0.04rem   #605c60 , 16rem 169rem 0 0.04rem   #605c60 , -33rem 200rem 0 0.02rem   #605c60 , 79rem 108rem 0 0.02rem   rgb(136, 130, 136) , 72rem 17rem 0 0.04rem   rgb(136, 130, 136) , 65rem 29rem 0 0.02rem   rgb(136, 130, 136) , 42rem 47rem 0 0.04rem   #605c60 , 58rem 16rem 0 0.04rem   #605c60 , 150rem 194rem 0 0.04rem   rgb(136, 130, 136) , -18rem 53rem 0 0.02rem   #605c60 , -23rem 31rem 0 0.04rem   rgb(136, 130, 136) , 52rem 156rem 0 0.04rem   #605c60 , 139rem 192rem 0 0.04rem   rgb(136, 130, 136) , -37rem 35rem 0 0.02rem   #605c60 , 67rem 62rem 0 0.04rem   rgb(136, 130, 136) , 141rem 52rem 0 0.02rem   #605c60 , 43rem 181rem 0 0.02rem   rgb(136, 130, 136) , -22rem 106rem 0 0.04rem   rgb(136, 130, 136) , 111rem 116rem 0 0.02rem   rgb(136, 130, 136) , 16rem 177rem 0 0.04rem   rgb(136, 130, 136) , 8rem 153rem 0 0.04rem   #605c60 , 57rem 183rem 0 0.02rem   #605c60 , 20rem 121rem 0 0.04rem   rgb(136, 130, 136) , -10rem 170rem 0 0.02rem   #605c60 , 9rem 35rem 0 0.04rem   rgb(136, 130, 136) , 102rem 114rem 0 0.02rem   #605c60 , 112rem 170rem 0 0.02rem   #605c60 , 70rem 49rem 0 0.04rem   rgb(136, 130, 136) , 74rem 94rem 0 0.02rem   #605c60 , 119rem 25rem 0 0.04rem   rgb(136, 130, 136) , 133rem 161rem 0 0.04rem   rgb(136, 130, 136) , 19rem 123rem 0 0.02rem   #605c60 , 44rem 54rem 0 0.02rem   #605c60 , -40rem 173rem 0 0.04rem   #605c60 , 48rem 13rem 0 0.04rem   rgb(136, 130, 136) , 119rem 123rem 0 0.04rem   #605c60 , 64rem 140rem 0 0.04rem   #605c60 , -47rem 65rem 0 0.02rem   #605c60 , 51rem 116rem 0 0.04rem   #605c60 , 139rem 117rem 0 0.02rem   rgb(136, 130, 136) , -40rem 54rem 0 0.02rem   rgb(136, 130, 136) , 64rem 61rem 0 0.02rem   #605c60 , 17rem 191rem 0 0.04rem   #605c60 , 106rem 196rem 0 0.04rem   #605c60 , 101rem 164rem 0 0.02rem   #605c60 , -38rem 132rem 0 0.02rem   rgb(136, 130, 136) , 28rem 172rem 0 0.02rem   rgb(136, 130, 136) , 97rem 115rem 0 0.02rem   rgb(136, 130, 136) , 82rem 157rem 0 0.04rem   rgb(136, 130, 136);
+    opacity: 0.05;
+    animation: back 5s infinite;
+  }
+  .blobby-bits {
+    width: 0.2rem;
+    height: 0.2rem;
+    right: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: auto;
+    transform: translate3d(0, 20rem, 0) scale(0);
+    display: none;
+  }
+  .blobby-bits:after, .blobby-bits:before {
+    width: 0.2rem;
+    height: 0.2rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    box-shadow: 67rem 31rem 0   #d2f72e , 30rem 99rem 0 0.3rem   #c0e909 , 25rem 146rem 0 0.7rem   #c0e909 , 19rem 1rem 0 0.6rem   #7d7c79 , -46rem 90rem 0 0.4rem   #c0e909 , -13rem 27rem 0 0.1rem   #7d7c79 , 2rem 85rem 0 0.9rem   #c0e909 , 44rem 101rem 0 0.5rem   #c0e909 , -9rem 57rem 0 0.3rem   #7d7c79 , 24rem 96rem 0 0.5rem   #7d7c79 , -41rem 143rem 0 0.9rem   #7d7c79 , -48rem 84rem 0 0.3rem   #c0e909 , -47rem 150rem 0 0.3rem   #c0e909 , 31rem 26rem 0 0.6rem   #c0e909 , 17rem 82rem 0 0.1rem   #c0e909 , -21rem 129rem 0 0.2rem   #7d7c79 , -3rem 68rem 0 0.4rem   #c0e909 , 11rem 136rem 0 0.4rem   #c0e909 , 48rem 12rem 0 0.6rem   #c0e909 , 3rem 106rem 0 0.3rem   #7d7c79 , 18rem 89rem 0 0.4rem   #c0e909 , -14rem 34rem 0 0.7rem   #7d7c79 , 13rem 75rem 0 0.4rem   #7d7c79 , 53rem 38rem 0 0.9rem   #7d7c79 , 70rem 123rem 0 0.6rem   #7d7c79 , -6rem 143rem 0 0.4rem   #c0e909 , -4rem 111rem 0 0.9rem   #7d7c79 , -43rem 74rem 0 0.8rem   #7d7c79 , 5rem 146rem 0 1rem   #7d7c79 , 52rem 90rem 0 0.5rem   #7d7c79 , 22rem 29rem 0 0.4rem   #7d7c79 , -31rem 150rem 0 0.3rem   #c0e909 , -3rem 133rem 0 0.3rem   #7d7c79 , 11rem 69rem 0 0.9rem   #c0e909 , 66rem 147rem 0 1rem   #c0e909 , 23rem 132rem 0 0.6rem   #7d7c79 , 46rem 26rem 0 0.6rem   #c0e909 , 68rem 81rem 0 1rem   #7d7c79 , 28rem 26rem 0 0.6rem   #c0e909 , 33rem 111rem 0 0.9rem   #c0e909 , 47rem 36rem 0 0.8rem   #7d7c79 , 14rem 61rem 0 0.5rem   #c0e909 , -30rem 145rem 0 0.6rem   #c0e909 , 57rem 119rem 0 0.1rem   #c0e909 , 17rem 23rem 0 0.1rem   #7d7c79 , 42rem 30rem 0 0.6rem   #c0e909 , 27rem 88rem 0 0.9rem   #c0e909 , 48rem 54rem 0 0.3rem   #c0e909 , 18rem 88rem 0 0.7rem   #c0e909 , 17rem 137rem 0 0.8rem   #c0e909;
+    opacity: 0.025;
+    transform: translate3d(0, 0, -10rem);
+    border-radius: 50%;
+    animation: sway 20s ease-in-out infinite;
+  }
+  .blobby-bits:after {
+    box-shadow: 2rem 141rem 0   #7d7c79 , -29rem 60rem 0 0.1rem   #acd008 , 31rem 107rem 0 0.95rem   #c0e909 , 12rem 127rem 0 0.7rem   #acd008 , -29rem 99rem 0 0.9rem   #c0e909 , -35rem 60rem 0 0.8rem   #c0e909 , 17rem 45rem 0 0.35rem   #c0e909 , 39rem 120rem 0 0.2rem   #acd008 , -28rem 102rem 0 0.95rem   #c0e909 , 48rem 52rem 0 0.95rem   #acd008 , 57rem 102rem 0 0.75rem   #acd008 , 7rem 77rem 0 0.95rem   #c0e909 , 22rem 62rem 0 0.65rem   #c0e909 , -32rem 68rem 0 0.6rem   #acd008 , -31rem 52rem 0 0.9rem   #acd008 , -1rem 111rem 0 0.6rem   #c0e909 , 5rem 47rem 0 0.45rem   #c0e909 , -13rem 100rem 0 0.05rem   #c0e909 , -7rem 11rem 0 0.3rem   #c0e909 , -27rem 25rem 0 0.8rem   #acd008 , -30rem 131rem 0 0.25rem   #acd008 , -1rem 103rem 0 0.35rem   #c0e909 , -12rem 148rem 0 0.8rem   #c0e909 , 66rem 136rem 0 0.25rem   #acd008 , -46rem 133rem 0 0.3rem   #c0e909 , -44rem 97rem 0 0.1rem   #acd008 , 49rem 114rem 0 0.05rem   #c0e909 , 23rem 104rem 0 0.5rem   #c0e909 , -28rem 16rem 0 0.75rem   #acd008 , -8rem 43rem 0 0.4rem   #c0e909 , 27rem 106rem 0 0.3rem   #acd008 , 19rem 1rem 0 0.95rem   #c0e909 , 62rem 38rem 0 0.15rem   #c0e909 , -22rem 82rem 0 0.8rem   #c0e909 , -27rem 27rem 0 0.25rem   #c0e909 , -5rem 104rem 0 0.15rem   #acd008 , 25rem 96rem 0 0.75rem   #acd008 , -25rem 143rem 0 0.6rem   #acd008 , 7rem 93rem 0 0.3rem   #c0e909 , 25rem 78rem 0 0.75rem   #c0e909 , 13rem 149rem 0 1rem   #acd008 , 35rem 4rem 0 0.9rem   #acd008 , -1rem 27rem 0 0.85rem   #c0e909 , -2rem 142rem 0 0.1rem   #acd008 , 53rem 80rem 0 0.2rem   #c0e909 , -27rem 34rem 0 0.35rem   #c0e909 , -16rem 115rem 0 0.65rem   #c0e909 , -3rem 84rem 0 0.35rem   #acd008 , -16rem 136rem 0 0.5rem   #c0e909 , 23rem 101rem 0 1rem   #acd008 , -31rem 83rem 0 0.3rem   #acd008 , -49rem 29rem 0 0.4rem   #c0e909 , 62rem 21rem 0 0.85rem   #c0e909 , 13rem 128rem 0 0.95rem   #c0e909 , -25rem 145rem 0 0.25rem   #c0e909 , -7rem 120rem 0 0.55rem   #acd008 , 6rem 101rem 0 0.35rem   #c0e909 , 56rem 134rem 0 0.45rem   #c0e909 , -23rem 4rem 0 0.75rem   #c0e909 , 18rem 137rem 0 0.35rem   #c0e909 , 61rem 110rem 0 0.55rem   #acd008 , 57rem 50rem 0 0.65rem   #acd008 , -12rem 1rem 0 0.5rem   #c0e909 , -33rem 91rem 0 0.55rem   #c0e909 , 22rem 31rem 0 0.65rem   #c0e909 , -2rem 37rem 0 0.35rem   #acd008 , 43rem 120rem 0 0.95rem   #acd008 , -17rem 45rem 0 0.75rem   #acd008 , 37rem 10rem 0 0.05rem   #c0e909 , 65rem 96rem 0 0.9rem   #acd008;
+    transform: translate3d(0, 0, 27rem);
+    animation: sway2 25s ease-in-out infinite;
+  }
+  @keyframes sway {
+    33% {
+      transform: translate3d(-1rem, 0, -5rem);
+    }
+    66% {
+      transform: translate3d(1rem, 0, -10rem);
+    }
+  }
+  @keyframes sway2 {
+    33% {
+      transform: translate3d(2rem, 0, 27rem);
+    }
+    66% {
+      transform: translate3d(-2rem, 0, 20rem);
+    }
+  }
+  @keyframes blobby-in {
+    100% {
+      transform: translate3d(0, 0, 0) scale(1);
+    }
+  }
+}
+@media (orientation: portrait) {
+  html {
+    font-size: 1.8vh;
+  }
+  .the-cards {
+    padding: 50rem 7vw 6rem;
+  }
+}/*# sourceMappingURL=style.css.map */
